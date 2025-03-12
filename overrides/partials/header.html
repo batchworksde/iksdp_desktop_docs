@@ -1,0 +1,9 @@
+<nav class="language-switcher">
+    {% for lang, name in config.plugins.i18n.languages.items() %}
+      <a href="/{{ lang }}/" class="language-link">
+        {{ name }}
+      </a>
+      {% if not loop.last %} | {% endif %}
+    {% endfor %}
+  </nav>
+  

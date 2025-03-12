@@ -1,0 +1,27 @@
+site_name: IKSDP Documentation
+plugins:
+  - i18n:
+      default_language: en
+      languages:
+        en: English
+        de: Deutsch
+        it: Italiano
+  # - pdf-export:
+  #     media_type: print
+nav:
+  - English:
+      - Project Documentation: en/project.md
+      - Poweruser Documenation: en/poweruser.md
+      - User Documenation: en/user.md
+      - Developer Documentation: en/developer.md
+  - Deutsch:
+      - Projektdokumentation: de/project.md
+  - Italiano:
+      - Documentazione di progetto: it/project.md
+  - Languages:
+      - English: /en/
+      - Deutsch: /de/
+      - Italiano: /fr/
+theme: 
+  name: readthedocs
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Entwicklerdokumentation - IKSDP Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Entwicklerdokumentation";
+        var mkdocs_page_input_path = "de/developer.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IKSDP Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/about/">About</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deutsch</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../project/">Projektdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user/">Benutzerdokumentation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Entwicklerdokumentation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#zielgruppe-des-dokumentes">Zielgruppe des Dokumentes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-und-installation">Download und Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#image-lokal-erstellen">Image lokal erstellen</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#image-auf-debian-basierendem-system-erzeugen">Image auf Debian basierendem System erzeugen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image-per-build-container-erzeugen">Image per Build Container erzeugen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#empfehlungen">Empfehlungen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#das-image-kopieren">das Image kopieren</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#testbetrieb">Testbetrieb</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#empfehlungen_1">Empfehlungen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#produktivbetrieb">Produktivbetrieb</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#image-anpassen">Image anpassen</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Italiano</span></p>
+              <ul>
+              </ul>
+              <p class="caption"><span class="caption-text">Languages</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="/en/">English</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/de/">Deutsch</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/fr/">Italiano</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IKSDP Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Deutsch</li>
+      <li class="breadcrumb-item active">Entwicklerdokumentation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="iksdp-desktop-linux-entwicklerdokumentation">IKSDP Desktop Linux Entwicklerdokumentation</h1>
+<h2 id="zielgruppe-des-dokumentes">Zielgruppe des Dokumentes</h2>
+<p>Dieses Dokument wendet sich an Personen, welche das IKSDP Linux anpassen oder erweitern wollen.</p>
+<p>Das Projekt wird aktuell auf <a href="https://github.com/batchworksde/iksdp_desktop">Github</a> gehostet. Die Dokumentation wird hier gehostet.</p>
+<h2 id="download-und-installation">Download und Installation</h2>
+<p>Auf dem Zielsystem wird das Livesystem von SSD gebootet. Zum testen kann das System allerdings auch von einem USB-Stick an Hardware oder von einem DVD Image in einer VM gestartet werden.</p>
+<p>Das aktuelle release kann über <a href="https://github.com/batchworksde/iksdp_desktop/releases">Github Releases</a> runtergeladen werden. Dort ist unter "ISO Image" ein link zum aktuellen ISO hinterlegt.</p>
+<p>Zwischenreleases werden über den Webserver <a href="http://iksdp.pfadfinderzentrum.org">iksdp.pfadfinderzentrum.org/</a> bereitgestellt.</p>
+<h2 id="image-lokal-erstellen">Image lokal erstellen</h2>
+<p>Um das Image lokal zu erstellen gibt es aktuell 2 getestet Varianten. In beiden Fällen wird ein Linux basiertes System benötigt.</p>
+<ul>
+<li>man verwendet eine .deb basierte Distribution (wir haben Debian 12 und Ubuntu 24.04 getestet) </li>
+<li>man erstellt das Image über einen <code>docker</code> oder <code>podman</code> Container</li>
+</ul>
+<p>In beiden Fällen muss der Nutzer unter dem das Image gebaut wird über <code>sudo</code> Berechtigungen verfügen.</p>
+<p>Zuerst muss das Image von github gecloned werden:</p>
+<p><code>git clone git@github.com:batchworksde/iksdp_desktop.git</code></p>
+<p>Nun wird eine Umgebunsvariable <code>ROOTPW</code> gesetzt, welches als Passwort des Nutzers <code>root</code> im Image gesetzt wird. </p>
+<h3 id="image-auf-debian-basierendem-system-erzeugen">Image auf Debian basierendem System erzeugen</h3>
+<p>Es wird das buildscript <code>debian-live/build.sh</code> gestartet.</p>
+<pre><code class="language-bash">cd iksdp_desktop
+export ROOTPW=MYPASSWORD
+./debian-live/build.sh
+</code></pre>
+<h3 id="image-per-build-container-erzeugen">Image per Build Container erzeugen</h3>
+<p>Auf der Buildinstanz muss <code>docker</code> oder <code>podman</code> installiert sein. </p>
+<pre><code class="language-bash">cd iksdp_desktop
+./debian-live/container-build.sh --build
+</code></pre>
+<p>Ausgabe:</p>
+<pre><code>Use apt caching proxy (highly recommended)? [Y|n]: 
+
+Apt caching proxy URL [http://localhost:3142]: 
+Successfully built 9f7804923f2d
+Successfully tagged iksdp_desktop-builder:latest
+</code></pre>
+<pre><code class="language-bash">export ROOTPW=MYPASSWORD
+./debian-live/container-build.sh --run
+</code></pre>
+<p>Je nach Geschwindigkeit der Buildinstanz wird das Erstellen des Image zwischen 10-XX Minuten dauern.</p>
+<p>Das fertige image wird im Unterordner <code>build</code> mit dem Namen <code>debian-live-bookworm-RELEASEVERSION-TIMESTAMP-ARCH.hybrid.iso</code> abgelegt.</p>
+<h3 id="empfehlungen">Empfehlungen</h3>
+<p>Beim mehrfachen Erzeugen des lokalen Images kann es hilfreich sein einen lokalen apt-proxy zu verwenden. Auf debian basierenden systemen kann man dies per </p>
+<pre><code class="language-bash">apt install apt-cacher-ng -y
+</code></pre>
+<p>nachinstalliert werden. Der Dienst läuft auf tcp/3142. Beim build container wird dieser beim Erstellen des builder containers konfiguriert. 
+Beim Erstellen über <code>container-build.sh</code> kann dies per Umgebungsvariable gesetzt werden.</p>
+<pre><code class="language-bash">export LB
+</code></pre>
+<h2 id="das-image-kopieren">das Image kopieren</h2>
+<p>Das Image kann sowohl von USB-Stick, DVD oder als Festplattenimage gebootet werden. </p>
+<h3 id="testbetrieb">Testbetrieb</h3>
+<p>Um das Image auf einen USB Stick zu kopieren kann man unter Linux oder MacOS beispielsweise dd verwenden.</p>
+<p>Linux:</p>
+<pre><code class="language-bash">dd if=./debian-live-bookworm-RELEASEVERSION-TIMESTAMP-ARCH.hybrid.iso of=/dev/sdX bs=1M status=progress
+</code></pre>
+<p>MacOS:
+raussuchen.. </p>
+<p>Alternativ kann für MacOS auch die Anwendung <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> verwendet werden.</p>
+<p>Für Windows bietet sich beispielsweise die Anwendung <a href="https://rufus.ie">rufus</a> oder ebenfalls der <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> an.</p>
+<h3 id="empfehlungen_1">Empfehlungen</h3>
+<p>Für kleinere Tests bietet sich eine lokale Virtualisierungslösung wie VMware Fusion oder Parallels an. Dort kann das Image einfach von einem virtuellem CDROM gebootet werden.</p>
+<h3 id="produktivbetrieb">Produktivbetrieb</h3>
+<p>In der konreten Installation beim IKSDP wird als bootmedium die SSD verwendet. Um sicherzustellen, dass keinerlei Dateien durch das lokale OS im Zugriff sind verwenden wir einen PXE Boot. 
+Das System wird gebootet und im Startscreen F7 vom Netzwerk gebootet. Es wird ein minimales Live Helperlinux gestartet. Um die Dateien auf den lokalen SSD zu kopieren wird folgendes durchgeführt:</p>
+<pre><code>sudo -s
+mount -t cifs //192.168.XXX.XXX /mnt
+dd if=/mnt/debian-live-bookworm-RELEASEVERSION-TIMESTAMP-ARCH.hybrid.iso of=/dev/nvme0n1 bs=1M status=progress
+sync
+reboot
+</code></pre>
+<h2 id="image-anpassen">Image anpassen</h2>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../user/" class="btn btn-neutral float-left" title="Benutzerdokumentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../user/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
