@@ -49,7 +49,7 @@ cd iksdp_desktop
 ``` 
 
 Ausgabe:
-```
+```bash
 Use apt caching proxy (highly recommended)? [Y|n]: 
 
 Apt caching proxy URL [http://localhost:3142]: 
@@ -74,7 +74,7 @@ Beim mehrfachen Erzeugen des lokalen Images kann es hilfreich sein einen lokalen
 apt install apt-cacher-ng -y
 ```
 
-nachinstalliert werden. Der Dienst läuft auf tcp/3142. Beim build container wird dieser beim Erstellen des builder containers konfiguriert. 
+nachinstalliert werden. Der Dienst läuft auf `tcp/3142`. Beim build container wird dieser beim Erstellen des builder containers konfiguriert. 
 Beim Erstellen über `container-build.sh` kann dies per Umgebungsvariable gesetzt werden.
 
 ```bash
@@ -88,7 +88,7 @@ Das Image kann sowohl von USB-Stick, DVD oder als Festplattenimage gebootet werd
 
 ### Testbetrieb
 
-Um das Image auf einen USB Stick zu kopieren kann man unter Linux oder MacOS beispielsweise dd verwenden.
+Um das Image auf einen USB Stick zu kopieren kann man unter Linux oder MacOS beispielsweise `dd` verwenden.
 
 Linux:
 ```bash
@@ -96,7 +96,7 @@ dd if=./debian-live-bookworm-RELEASEVERSION-TIMESTAMP-ARCH.hybrid.iso of=/dev/sd
 ```
 
 MacOS:
-raussuchen.. 
+TODO raussuchen.. 
 
 Alternativ kann für MacOS auch die Anwendung [Raspberry Pi Imager](https://www.raspberrypi.com/software/) verwendet werden.
 
@@ -109,9 +109,9 @@ Für kleinere Tests bietet sich eine lokale Virtualisierungslösung wie VMware F
 ### Produktivbetrieb
 
 In der konreten Installation beim IKSDP wird als bootmedium die SSD verwendet. Um sicherzustellen, dass keinerlei Dateien durch das lokale OS im Zugriff sind verwenden wir einen PXE Boot. 
-Das System wird gebootet und im Startscreen F7 vom Netzwerk gebootet. Es wird ein minimales Live Helperlinux gestartet. Um die Dateien auf den lokalen SSD zu kopieren wird folgendes durchgeführt:
+Das System wird gebootet und im Startscreen `F7` vom Netzwerk gebootet. Es wird ein minimales Live Helperlinux gestartet. Um die Dateien auf den lokalen SSD zu kopieren wird folgendes durchgeführt:
 
-```
+```bash
 sudo -s
 mount -t cifs //192.168.XXX.XXX /mnt
 dd if=/mnt/debian-live-bookworm-RELEASEVERSION-TIMESTAMP-ARCH.hybrid.iso of=/dev/nvme0n1 bs=1M status=progress
@@ -121,3 +121,4 @@ reboot
 
 ## Image anpassen
 
+TODO

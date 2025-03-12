@@ -1,76 +1,84 @@
+# IKSDP Desktop Linux Project Documentation  
 
-# IKSDP Project Documentation
+## The IKSDP  
 
-## The IKSDP
+The IKSDP (International Kenyan Scout Development Program) is an educational institution in Nyandiwa, Kenya. The facility includes a kindergarten, a primary school, and, more recently, a secondary school.
 
-The IKSDP (International Kenyan Scout Development Program) is an educational institution in Nyandiwa, Kenya. The institution includes a primary school and, newly, a secondary school.
+A computer lab with internet access is to be set up for the secondary school. Additionally, the devices should also be available for use by people in the surrounding community.  
 
-A computer lab with internet access is to be set up for the secondary school. Furthermore, the devices will also be made available to people in the surrounding area.
+## The Computer Lab  
 
-A computer lab is to be set up that will be open to students, teachers, school management, guests of the IKSDP, and the general public. Internet access has been installed via Starlink. Additionally, a Wi-Fi access point has been installed. This access point could also take on the role of an internet router in the future. It has an LTE modem installed and could connect via mobile providers such as Safaricom (4G+5G are well covered).
+The computer lab is intended to be accessible to students, teachers, school administration, guests of the IKSDP, and the general public. An internet connection via Starlink has been installed. Additionally, a Wi-Fi access point has been set up, which could serve as an internet router in the future. This access point includes an integrated LTE modem, which could be used via mobile providers like Safaricom (4G+5G coverage is strong). This setup ensures that internet access is theoretically redundant, in case Starlink is deactivated in the future.  
 
-## Hardware
+### Hardware  
 
-The following hardware has been purchased and installed:
+The following hardware has been purchased and installed:  
 
-- 5x BOSGAME Mini PC B100
-- Lenovo L22i-40 21.5" FHD Monitor
-- Epson L6290 EcoTank Printer
-- Logitech USB Headset H390
-- LOGITECH C270 HD WEBCAM
-- Starlink Mini
-- Mikrotik L009UiGS-2HaxD
-- Mikrotik Hex
-- Mikrotik WAP ac LTE kit
-- JetKVM
+- 5x BOSGAME Mini PC B100  
+- 5x Lenovo L22i-40 21.5" FHD Monitor  
+- 5x Logitech USB Headset H390  
+- 5x Logitech C270 HD WEBCAM  
+- 1x Epson L6290 EcoTank Printer  
+- 1x Starlink Mini  
+- 1x Mikrotik L009UiGS-2HaxD  
+- 1x Mikrotik Hex  
+- 1x Mikrotik WAP ac LTE kit  
+- 1x JetKVM  
 
-A separate documentation for the network will be created.
+The network documentation is available to the power user.  
 
-## Software
+### Software  
 
-A live Linux system has been installed on the PCs. This provides both the operating system and all applications. We use Linux because it is a free and open-source operating system. Linux is commonly used in educational institutions for the following reasons:
+A live Linux system has been installed on the PCs. This provides both the operating system and all required applications. We use Linux because it is a free and open-source operating system. Linux is widely used in educational institutions for the following reasons:  
 
-- The software and operating system can be used and customized for free.
-- Linux is less vulnerable to malware and viruses.
-- Linux is the leading operating system for servers and embedded systems.
+- Linux and its software can be used and modified free of charge.  
+- Linux is less vulnerable to malware and viruses.  
+- Linux is the leading operating system for servers and embedded systems.  
 
-The IKSDP Linux supports two operating modes:
+IKSDP Linux supports two operating modes:  
 
-1. **Mode for guests and the public - non-persistent mode**
+#### Guest and Public Mode: Non-Persistent Mode  
 
-   All changes are discarded after a reboot. This ensures that no user data from guests or internet café users is stored or lost.
-   In this mode, users can install software, but it will be discarded along with all documents and settings upon reboot.
+All changes are discarded after a reboot. This ensures that no user data from guests or internet café users is stored or lost.  
+Users can install software, but all software, documents, and settings will be reset upon restart.  
 
-2. **Mode for students and school management - persistent mode**
+#### Student and Administration Mode: Persistent Mode  
 
-   A USB stick is prepared for the user or user group. All system changes are saved on the USB stick. Users can install software and create documents that remain available after reboot.
-   The data on the USB stick can optionally be encrypted. The user can also set a personal password.
+For this mode, a USB stick is prepared for the user or user group. All changes to the system are saved on the USB stick. Users can install software and create documents that will remain available after a restart.  
+The data on the USB stick can optionally be encrypted. Users can also set a personal password.  
 
-## Open Source Project on Github
+## Open Source Project on GitHub  
 
-This Linux system is available as an open-source project on GitHub at: [https://github.com/batchworksde/iksdp_desktop](https://github.com/batchworksde/iksdp_desktop) and can be further developed by all project participants. GitHub is currently the world's largest platform for open-source development. The "Harambee" principle aligns with the open-source philosophy, which is based on collaboration at eye level. Anyone can join, copy, and/or further develop this project.
+The Linux operating system used is available as an open-source project on GitHub at [https://github.com/batchworksde/iksdp_desktop](https://github.com/batchworksde/iksdp_desktop) and can be further developed by all project participants. GitHub is currently the world's largest platform for open-source development. The "Harambee" philosophy aligns with the open-source concept, which emphasizes collaborative project work on an equal footing. Anyone can join, copy, and further develop this project.  
 
-Furthermore, the project should not be dependent on specific individuals and should always be able to be taken over or continued by volunteers or the IKSDP.
+Furthermore, the project should not depend on specific individuals and should always be transferable to volunteers or the IKSDP.  
 
-If new software requirements arise or bugs need to be fixed, they can be reported as issues.
+If new software requirements arise or issues need to be resolved, they can be reported as an issue on GitHub.  
 
-Additionally, the PCs should be updated at least twice a year.
+Additionally, the PCs should be updated at least twice a year.  
 
-## Remote Support
+## Remote Support  
 
-The local contact person for the PC environment is Victor. The network is connected to the cloud via a ZeroTier VPN. Support personnel can connect to local PCs and network equipment through this VPN if necessary.
+The local contact person for the PC environment is Victor. The network is connected to the cloud via ZeroTier VPN. Support staff can connect remotely to local PCs and network equipment via this VPN if needed.  
 
-For issues and concerns, Victor has multiple support options:
+For troubleshooting and support, Victor has multiple options:  
 
-1. **Opening an issue in the GitHub project:** Here, bugs, configuration changes, or additional software requests can be submitted that should be included in the base installation for both persistent and non-persistent modes.
-   The issue will be discussed and implemented by a project developer. Once a change is made to the base system, a new base image is created, which must be copied to the PCs. A separate update procedure documentation will be created.
+#### 1. Creating an Issue on the GitHub Project  
 
-2. **Live support via video conference/RustDesk:**
+This requires a working internet connection. Issues can also be created from a mobile phone or tablet.  
+Issues can include bug reports, configuration changes, or requests for additional software to be included in the base installation (both persistent and non-persistent modes).  
+A project developer will review and potentially implement the requested changes. If a change is made to the base system, a new base image will be created. This image must then be copied to the PCs.  
 
-   If required, the RustDesk application can be started. This generates a password that must be shared live with the support personnel.
-   The support personnel will also start the RustDesk application on their side and can then take control of the screen, mouse, and keyboard inputs.
-   For this to work, IKSDP Linux must be running and have internet access.
+The documentation for creating GitHub issues is available to the power user.  
+The documentation for the update process is available to the power user.  
 
-3. **Support via JetKVM:**
+#### 2. Live Support via Video Conference/RustDesk  
 
-   JetKVM is designed for situations where a PC does not start and remote support is required. The JetKVM device is connected to a PC via USB and HDMI. The support personnel can then access the system using a predefined account.
+For this, IKSDP Linux must be running, and internet access must be available.  
+If necessary, the **"RustDesk"** application can be launched. RustDesk provides the user with an ID and password, which must be communicated to the support staff in real time.  
+The support staff also starts the RustDesk application and can then view the remote screen and control the mouse and keyboard.  
+
+#### 3. Support via JetKVM  
+
+For this, an internet connection is required.  
+The JetKVM is intended for cases where a PC does not start, and remote support is needed. The JetKVM device is connected to a PC via USB and HDMI. The support staff can then remotely access the PC using a designated account and even make BIOS adjustments.  

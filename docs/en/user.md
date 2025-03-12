@@ -1,66 +1,66 @@
+# IKSDP Desktop Linux User Documentation  
 
-# IKSDP User Documentation
+## Target Audience of the Document  
 
-## Target Audience of the Document
+This document is intended for users of IKSDP Desktop Linux. The operating system is a live Linux system that supports two different operating modes:  
+- [Non-persistent mode](#non-persistent-mode)  
+- [Persistent mode](#persistent-mode)  
 
-This document is intended for users of the IKSDP Desktop Linux. This operating system is a live Linux system that supports two different operating modes.
+You should decide on an operating mode before starting the system.  
 
-## Starting the System
+## Starting the System  
 
-When starting the system, you will see the following screen:
+When starting the system, you will see the following screen:  
 
-![systemboot](../shared/images/systemboot.png)
+![systemboot](../shared/images/systemboot.png)  
 
-"Live system (amd64)" is preselected. If you do not connect a USB stick to the system, it will start in non-persistent mode. If you connect a prepared USB stick, the system will start in persistent mode.
+"Live system (amd64)" is preselected. If no USB stick is connected to the system before startup, the system will start in non-persistent mode. If you have connected a prepared USB stick before startup, the system will start in persistent mode.  
 
-If the USB stick is inserted after the boot selection, the system will remain in non-persistent mode. The system must be restarted to switch to persistent mode.
+If the USB stick is inserted after selecting the boot option, the system will remain in non-persistent mode. The system must be restarted to switch to persistent mode.  
 
-### Non-Persistent Mode
+### Non-Persistent Mode  
 
-This mode is the default mode. It can be recognized by the "non-persistent" label displayed in the top right corner of the desktop.
+This is the default mode. You can recognize it by the "non-persistent" label displayed in the top-right corner of the desktop.  
 
-![non-persistent](../shared/images/non-persistent.png)
+![non-persistent](../shared/images/non-persistent.png)  
 
-In this mode, changes to the system can be made; however, these changes will be completely lost after a system restart.
+In this mode, changes to the system can be made, but they will be completely reset after a restart.  
 
-If you create files during a user session that you wish to edit later, they must be saved on a mobile storage device such as a USB stick, a smartphone, or a cloud service.
+If you create files during a session that you want to edit later, you must save them on an external storage device such as a USB stick, mobile phone, or cloud service.  
 
-### Persistent Mode
+### Persistent Mode  
 
-In this mode, user changes are saved on a specially prepared USB stick. This means that user settings in programs, such as bookmarks in browsers, and files will be retained even after a system restart, unlike in non-persistent mode.
+In this mode, user changes are stored on a specially prepared USB stick. This means that user settings in programs (such as browser bookmarks), files, and installed programs will remain even after restarting the system.  
 
-![persistent](../shared/images/persistent.png)
+![persistent](../shared/images/persistent.png)  
 
-The USB stick must not be removed from the system while in persistent mode; otherwise, data loss may occur.
+> **The USB stick must not be removed while in persistent mode; otherwise, data loss may occur!**  
 
-## Installing Additional Software
+## Installing Additional Software  
 
-Additional software can be installed. In non-persistent mode, this must be done after every system start. If software should be permanently added to the installation, please contact your local IKSDP representative. They can arrange the installation for you.
+It is possible to install additional software. In non-persistent mode, this must be done **after every system restart**. If you want to permanently install software, please contact your local IKSDP representative. They can arrange the installation for you.  
 
-Select "System Tools" -> "Software".
+Go to "System Tools" > "Software"  
+![Software_installation](../shared/images/install_software01.png)  
 
-![Software_installation](../shared/images/install_software01.png)
+Then, search for the software and select it. In this example, we are searching for an internet radio application.  
+![Software_installation](../shared/images/install_software02.png)  
 
-Search for the software and select it:
+Install the software by clicking the "Install" button.  
+Below the "Install" button, "Flatpak" should be displayed.  
+![Software_installation](../shared/images/install_software03.png)  
 
-![Software_installation](../shared/images/install_software02.png)
+The installation may take some time, depending on the software size. The current progress is shown below the "Cancel" button. To cancel the installation, press the "Cancel" button.  
+![Software_installation](../shared/images/install_software04.png)  
 
-Install the software - "Flatpak" should be displayed under the software.
+Once the installation is complete, the software can be launched by clicking "Open."  
+![Software_installation](../shared/images/install_software05.png)  
 
-![Software_installation](../shared/images/install_software03.png)
+## Shutting Down the System  
 
-The installation of the software may take some time depending on its size.
+The system can be shut down by clicking the "Power" button in the top right corner ![Shutdown01](../shared/images/shutdown_power_symbol.png).  
+Click the "Power" button and then "Power Off..."  
+![Shutdown02](../shared/images/shutdown_power_menu.png)  
 
-![Software_installation](../shared/images/install_software04.png)
-
-![Software_installation](../shared/images/install_software05.png)
-
-Once the software is installed, it can be started via "Open".
-
-## Shutting Down the System
-
-The system can be shut down via the power symbol in the top right corner. Select the icon and "Power Off", then confirm.
-
-![Shutdown01](../shared/images/shutdown_01.png)
-
-![Shutdown02](../shared/images/shutdown_02.png)
+A "Power Off" dialog will appear. Click the "Power Off" button to shut down the system.  
+![Shutdown03](../shared/images/shutdown_dialog.png)

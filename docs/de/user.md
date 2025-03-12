@@ -1,5 +1,4 @@
-# IKSDP Benutzerdokumenation
-
+# IKSDP Desktop Linux Benutzer-Dokumenation
 
 ## Zielgruppe des Dokumentes
 
@@ -19,7 +18,7 @@ Es ist "Live system (amd64)" vorausgewählt. Wenn du vor dem Start kein USB Stic
 
 Wenn der USB-Stick nach der Bootauswahl angesteckt wird, so bleibt das System im nicht-persistenten Modus. Das System muss neugestartet um in den persisteten Modus zu wechseln.
 
-### Nicht persistenter Modus
+### Nicht-Persistenter Modus
 
 Dieser Modus ist der Standardmodus. Er ist daran zu erkennen, dass rechts oben im Desktop ein Eintrag "non-persistent" dargestellt wird. 
 

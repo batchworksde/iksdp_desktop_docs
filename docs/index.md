@@ -1,6 +1,6 @@
 # IKSDP Docs
 
-
-This documenaton exists in Deutsch, English and Italiano. Please choose language from left column.
-
-Only the project documentation is translated to italian and german. Primary documentation language is english.
+This documenaton exists in:
+- [Deutsch](de/project.md)
+- [English](en/project.md)
+- [Italiano](it/project.md)

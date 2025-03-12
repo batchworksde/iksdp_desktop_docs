@@ -16,12 +16,15 @@ nav:
       - Developer Documentation: en/developer.md
   - Deutsch:
       - Projektdokumentation: de/project.md
+      - Benutzerdokumentation: de/user.md
+      - Poweruserdokumentation: de/poweruser.md
+      - Entwicklerdokumentation: de/developer.md
   - Italiano:
       - Documentazione di progetto: it/project.md
-  # - Languages:
-  #     - English: /en/
-  #     - Deutsch: /de/
-  #     - Italiano: /fr/
+      - Documentazione per l'utente: it/user.md
+      - Documentazione per Poweruser: it/poweruser.md
+      - Documentazione per sviluppatori: it/developer.md
+
 theme: 
   name: readthedocs
 

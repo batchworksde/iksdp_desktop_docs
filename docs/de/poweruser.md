@@ -1,10 +1,10 @@
-# IKSDP Desktop Linux Power User Documentation  
+# IKSDP Desktop Linux Poweruser-Dokumentation
 
-## Create a USB Stick for a User  
+## USB-Stick für einen Nutzer erstellen
 
-TODO  
+TODO
 
-## Update the Operating System  
+## Betriebssystem aktualisieren
 
 TODO
 
