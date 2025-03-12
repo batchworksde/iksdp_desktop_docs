@@ -1,31 +1,32 @@
 # IKSDP Projekt Dokumenation
 
-## das IKSDP
+## Das IKSDP
 
-Das IKSDP (International Kenian Scout Development Program) ist eine Bildungseinrichtung in Nyandiwa/Kenia. An der Einrichtung befindet sich eine Grundschule, Primary School und neu eine Secondary School. 
+Das IKSDP (International Kenian Scout Development Program) ist eine Bildungseinrichtung in Nyandiwa/Kenia. An der Einrichtung befindet sich ein Kindergarten, eine Grundschule und neu eine weiterführende Schule. 
 
-Für die Secondary School soll ein Computerlabor mit Internetzugang eingerichtet werden. Weiterhin sollen die Geräte auch Menschen aus der Umgebung bereitgestellt werden.
+Für die weiterführende Schule soll ein Computerlabor mit Internetzugang eingerichtet werden. Weiterhin sollen die Geräte auch Menschen aus der Umgebung nutzen können.
 
-Es soll ein Computerlabor eingerichtet werden, welches Schüler, Lehrern, der Schulleitung, Gästen des IKSDP und der öffentlichen Bevölkerung  offenstehen. Es wurde ein Internetzugang über Starlink installiert. Weiterhin wurde ein WLAN Accesspoint installiert. Dieser Accesspoint könnte ebenfalls in der Zukunft die Rolle eines Internetrouters übernehmen. Er hat ein LTE Modem installiert und könnte über mobile Provider wie Safaricom (4G+5G sind gut abgedeckt).
+## Das Computerlabor
 
-## Hardware
+Das Computerlabor soll für Schüler, Lehrer, die Schulleitung, Gäste des IKSDP und die öffentliche Bevölkerung offenstehen. Es wurde ein Internetzugang über Starlink installiert. Weiterhin wurde ein WLAN Accesspoint angebracht, welcher ebenfalls in der Zukunft die Rolle eines Internetrouters übernehmen könnte. Dieser hat ein LTE Modem integriert und könnte über mobile Provider wie Safaricom (4G+5G sind gut abgedeckt) genutzt werden. Somit ist das Internet theoretisch redundant aufgebaut, sollte Starlink in Zukunft abgeschalten werden.
 
+### Hardware
 Es wurde folgende Hardware angeschafft und verbaut:
 
 - 5x BOSGAME Mini PC B100
-- Lenovo L22i-40 21.5" FHD Monitor
-- Epson L6290 EcoTank Printer 
-- Logitech USB Headset H390 
-- LOGITECH C270 HD WEBCAM 
-- Starlink Mini
-- Mikrotik L009UiGS-2HaxD
-- Mikrotik Hex 
-- Mikrotik WAP ac LTE kit
-- JetKVM
+- 5x Lenovo L22i-40 21.5" FHD Monitor
+- 5x Logitech USB Headset H390 
+- 5x Logitech C270 HD WEBCAM 
+- 1x Epson L6290 EcoTank Printer 
+- 1x Starlink Mini
+- 1x Mikrotik L009UiGS-2HaxD
+- 1x Mikrotik Hex 
+- 1x Mikrotik WAP ac LTE kit
+- 1x JetKVM
 
 Eine Dokumentation für das Netzwerk wird seperat erstellt.
 
-## Software
+### Software
 
 Auf die PCs wurde ein Live Linux installiert. Die stellt sowohl das Betriebssystem, als aucha alle Anwendungen bereit. Wir verwenden Linux, da es ein ein kostenloses und freies Betriebssystem ist. Aus folgenden Gründen wird Linux gerne an Bildungeinrichtungen verwendet.
 - die Software und das Betriebssystem kann kostenfrei benutzt und angepasst werden
