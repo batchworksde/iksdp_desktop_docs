@@ -11,20 +11,29 @@ site_name: IKSDP Documentation
 nav:
   - English:
       - Project Documentation: en/project.md
-      - User Documenation: en/user.md
+      - User Documenation:
+        - General: en/user.md
+        - Jitsi Meeting Tool: en/user/how-to-jitsi.md
       - Poweruser Documenation: en/poweruser.md
       - Developer Documentation: en/developer.md
   - Deutsch:
       - Projektdokumentation: de/project.md
-      - Benutzerdokumentation: de/user.md
+      - Benutzerdokumentation:
+        - Allgemein: de/user.md
+        - Jitsi Videokonferenz: de/user/how-to-jitsi.md
       - Poweruserdokumentation: de/poweruser.md
       - Entwicklerdokumentation: de/developer.md
   - Italiano:
       - Documentazione di progetto: it/project.md
-      - Documentazione per l'utente: it/user.md
+      - Documentazione per l'utente:
+        - Generale: it/user.md
+        - Videoconferenza Jitsi: it/user/how-to-jitsi.md
       - Documentazione per Poweruser: it/poweruser.md
       - Documentazione per sviluppatori: it/developer.md
 
 theme: 
   name: readthedocs
 
+plugins:
+  - open-in-new-tab:
+      add_icon: true
