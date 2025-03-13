@@ -1,6 +1,6 @@
 # IKSDP Docs
 
-This documenaton exists in:
-- [Deutsch](de/project.md)
+This documentation exists in:
 - [English](en/project.md)
+- [Deutsch](de/project.md)
 - [Italiano](it/project.md)
