@@ -111,19 +111,32 @@ dd if=/mnt/debian-live-bookworm-0.5.0-20250313055721-amd64.hybrid.iso of=/dev/nv
 
 ### Update possibility 2: use USB Stick
 
-just one time for each pc
----
+#### ensure usb boot is enabled
+
 - start the pc to update and hit "Delete" Button - at black screen and hit delete multiple times.
 - use keyboard to select boot and ensure **"USB"** is selected as Boot Option #1
 
-![biossettings](../shared/images/netboot-bios1.png)
+![biossettings](../shared/images/bios_boot_usb.png)
+
+- press F10 to save & exit
+- reboot the PC
 
 
+#### always
 - enter special usb update stick
 - select "try or install ubuntu"
+
+![biossettings](../shared/images/usb_boot_step1.png)
+
 - wait for the "Welcome to Ubuntu" to start fully
 - when "choose your language" appears you can close the windows using the X
+
+![biossettings](../shared/images/usb_boot_step2.png)
+
 - start "terminal"
+
+![biossettings](../shared/images/usb_boot_step3.png)
+
 
 - run commands to connect to central storage
 ```bash
@@ -131,10 +144,23 @@ sudo bash
 mount -t cifs -o username=user,password=live //192.168.200.1/smb /mnt
 ```
 
+![biossettings](../shared/images/usb_boot_step4.png)
+
+
+
 - update nvme harddisk using the commands
 ```bash
 dd if=/mnt/debian-live-bookworm-0.5.0-20250313055721-amd64.hybrid.iso of=/dev/nvme0n1 status=progress
 ```
 
+![biossettings](../shared/images/usb_boot_step5.png)
+
+
 - type "reboot"
 - pull out update stick and press enter when prompted
+
+![biossettings](../shared/images/usb_boot_step6.png)
+
+- check that image have a higher version now
+
+![copy_image](../shared/images/netboot-step9.png)
