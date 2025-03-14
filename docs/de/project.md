@@ -1,4 +1,4 @@
-# IKSDP Desktop Linux Projekt-Dokumenation
+# IKSDP Desktop Linux Projekt-Dokumentation
 
 ## Das IKSDP
 
