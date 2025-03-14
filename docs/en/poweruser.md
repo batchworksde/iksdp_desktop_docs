@@ -26,9 +26,8 @@ TODO
 
 ### Download latest image and copy to central storage
 
-- on the running iksdp os
 - download the newest image (.hybrid.iso) from the distribution share [http://iksdp.pfadfinderzentrum.org](http://iksdp.pfadfinderzentrum.org)
-- get connection to storage on router
+- to get connection to storage on router
 - open terminal -> windows key -> type "terminal"
 - enter:
 
@@ -36,7 +35,23 @@ TODO
 su - 
 mount -t nfs 192.168.200.1:/usb2-part1/smb /mnt
 ```
-- copy the downloaded image file to /mnt
+- to copy the downloaded image file to /mnt
+
+![user-copy1](../shared/images/poweruser-copy1.png)
+
+![user-copy2](../shared/images/poweruser-copy2.png)
+
+- /mnt is show in "other Locations" -> Debian GNU/Linux
+
+![user-copy3](../shared/images/poweruser-copy3.png)
+
+- you will need to type superuser password twice
+
+![user-copy4](../shared/images/poweruser-copy4.png)
+
+- indicator will show status of the copy job
+
+![user-copy5](../shared/images/poweruser-copy5.png)
 
 
 ### Update possibility 1: Update using the network
@@ -164,3 +179,18 @@ dd if=/mnt/debian-live-bookworm-0.5.0-20250313055721-amd64.hybrid.iso of=/dev/nv
 - check that image have a higher version now
 
 ![copy_image](../shared/images/netboot-step9.png)
+
+## Remote Support Using JetKVM  
+
+There might be situations where the support team needs to connect directly to a local computer.  
+For this reason, a JetKVM device has been set up.  
+
+![jetkvm1](../shared/images/jetkvm1.png)  
+
+The device must be connected via USB to the computer, and an HDMI cable must be connected from the JetKVM to the PC. Because of this setup, no output will be visible on the screen while the device is connected. Additionally, the JetKVM must be connected to a switch port in the lab, specifically on ports 2–8. Other devices, such as the printer, must be temporarily disconnected.  
+
+The support team will connect to the JetKVM device via VPN or cloud access.  
+
+On the local network, the device is accessible at [http://192.168.200.20](http://192.168.200.20).  
+
+
