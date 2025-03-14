@@ -1,4 +1,4 @@
-# IKSDP Desktop Linux Benutzer-Dokumenation
+# IKSDP Desktop Linux Benutzer-Dokumentation
 
 ## Zielgruppe des Dokumentes
 
