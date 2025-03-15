@@ -208,11 +208,41 @@ dd if=/mnt/debian-live-bookworm-0.5.0-20250313055721-amd64.hybrid.iso of=/dev/nv
 
 There might be situations where the support team needs to connect directly to a local computer.  
 For this reason, a JetKVM device has been set up.  
+![jetkvm00](../shared/images/poweruser/jetkvm/jetkvm00.jpg)  
 
-![jetkvm1](../shared/images/jetkvm1.png)  
+### Requirements  
+You will need:
+- Internet Connection
+- 1x LAN Cable
+- 1x JetKVM Device
+- 1x HDMI to Mini HDMI Cable
+- 1x USB-A to USB-C Cable
+![jetkvm01](../shared/images/poweruser/jetkvm/jetkvm01.jpg)  
 
-The device must be connected via USB to the computer, and an HDMI cable must be connected from the JetKVM to the PC. Because of this setup, no output will be visible on the screen while the device is connected. Additionally, the JetKVM must be connected to a switch port in the lab, specifically on ports 2–8. Other devices, such as the printer, must be temporarily disconnected.  
+### Setup the JetKVM Device
+1. Connect the **USB-C Cable** to the JetKVM device
+2. Connect the **Mini HDMI Cable** to the JetKVM device
+3. Connect one end of the **LAN-Cable** to the JetKVM device  
+![jetkvm02](../shared/images/poweruser/jetkvm/jetkvm02.jpg)
 
-The support team will connect to the JetKVM device via VPN or cloud access.  
+### Setup the Connection for the JetKVM Device
+1. Unplug the **LAN-Cable** of port 6 (printer) from the router. The printer will not be accessible at this time.  
+![jetkvm03](../shared/images/poweruser/jetkvm/jetkvm03.jpg)
+2. Plug in the other end of the **LAN-Cable** which is already connected to the JetKVM device.  
+![jetkvm04](../shared/images/poweruser/jetkvm/jetkvm04.jpg)
+3. Now unplug the **HDMI Cable** which is currently connected to the PC (this one belongs to the monitor).  
+![jetkvm05](../shared/images/poweruser/jetkvm/jetkvm05.jpg)
+4. Now plug in the **HDMI Cable** and the **USB-A Cable** from the JetKVM device to the PC. During the support session you are not able to see the output of the monitor. The screen stays black, because the output goes to the JetKVM device.  
+![jetkvm06](../shared/images/poweruser/jetkvm/jetkvm06.jpg)
+5. If everything is correctly connected you will see the IP **192.168.200.20** on the screen of the JetKVM device. You also see that **USB** and **HDMI** is connected.  
+![jetkvm07](../shared/images/poweruser/jetkvm/jetkvm07.jpg)
+6. At this point the support team is able to connect to the PC via VPN or cloud.
 
 On the local network, the device is accessible at [http://192.168.200.20](http://192.168.200.20).
+
+### Closing the Connection for the JetKVM Device
+
+1. Revert the steps from the [setup part](#setup-the-connection-for-the-jetkvm-device) starting with step 4.
+2. Make sure the HDMI Cable from the Monitor is connected to the PC.
+3. Make sure the LAN Cable from the printer is connected to port 6 of the router.
+4. The printer should be accessible again and the monitor should show you the output of the PC again.
