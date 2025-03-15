@@ -76,3 +76,5 @@ Der Supportler startet ebenfalls die Rustdesk Anwendung bei sich und kann nun de
 #### 3. Support per JetKVM:
 Hierfür ist es notwendig, dass der Internetzugriff funktioniert.
 Der JetKVM ist für den Fall gedacht, dass ein PC nicht startet und ein Remotesupport notwendig ist. Das JetKVM Gerät wird per USB und HDMI mit einem der PCs verbunden. Der Supportler kann sich nun über einen definierten Account aus der Ferne mit dem entsprechenden PC verbinden und sogar Einstellungen im BIOS vornehmen.
+
+hier war Asko
