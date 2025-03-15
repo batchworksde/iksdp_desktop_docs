@@ -11,10 +11,10 @@ site_name: IKSDP Documentation
 nav:
   - English:
       - Project Documentation: en/project.md
-      - User Documenation:
+      - User Documentation:
         - General: en/user.md
         - Jitsi Meeting Tool: en/user/how-to-jitsi.md
-      - Poweruser Documenation: en/poweruser.md
+      - Poweruser Documentation: en/poweruser.md
       - Developer Documentation: en/developer.md
   - Deutsch:
       - Projektdokumentation: de/project.md
