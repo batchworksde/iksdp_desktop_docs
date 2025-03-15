@@ -2,13 +2,16 @@
 
 ## Das IKSDP
 
-Das IKSDP (International Kenian Scout Development Program) ist eine Bildungseinrichtung in Nyandiwa/Kenia. An der Einrichtung befindet sich ein Kindergarten, eine Grundschule und neu eine weiterführende Schule. 
+Das IKSDP (International Kenian Scout Development Program) ist eine Bildungseinrichtung in Nyandiwa/Kenia. An der Einrichtung befindet sich ein Kindergarten, eine Grundschule und eine weiterführende Schule (mixed secondary school). 
 
-Für die weiterführende Schule soll ein Computerlabor mit Internetzugang eingerichtet werden. Weiterhin sollen die Geräte auch Menschen aus der Umgebung nutzen können.
+Für die weiterführende Schule wurde ein Computerlabor mit 5 Arbeitsplaetzen, Drucker und Internetzugang eingerichtet. Weiterhin sollen die Geräte auch von Personen aus der Umgebung genutzt werden können.
 
 ## Das Computerlabor
 
-Das Computerlabor soll für Schüler, Lehrer, die Schulleitung, Gäste des IKSDP und die öffentliche Bevölkerung offenstehen. Es wurde ein Internetzugang über Starlink installiert. Weiterhin wurde ein WLAN Accesspoint angebracht, welcher ebenfalls in der Zukunft die Rolle eines Internetrouters übernehmen könnte. Dieser hat ein LTE Modem integriert und könnte über mobile Provider wie Safaricom (4G+5G sind gut abgedeckt) genutzt werden. Somit ist das Internet theoretisch redundant aufgebaut, sollte Starlink in Zukunft abgeschalten werden.
+Das Computerlabor soll für Schüler, Lehrer, die Schulleitung, Gäste des IKSDP und die öffentliche Bevölkerung offenstehen. Es bietet eine Office-Plattform mit Text-, Tabellenkalkulations- und weiteren Programmen zur Erstellung und Bearbeitung von Dokumenten und Behoerdenkommunikation zur Verfuegung gestellt und verfuegt ueber einen Internetzugang. Bei der Auswahl der benoetigten Hard- und Software wurde auf Kosten, frei verfuegbare Software (Open Source) und Energieeffizienz geachtet. 
+
+### Technik
+Der Internetzugang wurde über Starlink installiert. Weiterhin wurde ein WLAN Accesspoint angebracht, welcher ebenfalls in der Zukunft die Rolle eines Internetrouters übernehmen könnte. Dieser hat ein LTE Modem integriert und könnte über mobile Provider wie Safaricom (4G+5G sind gut abgedeckt) genutzt werden. Somit ist das Internet theoretisch redundant aufgebaut, sollte Starlink in Zukunft abgeschalten werden.
 
 ### Hardware
 
@@ -24,6 +27,7 @@ Es wurde folgende Hardware angeschafft und verbaut:
 - 1x Mikrotik Hex 
 - 1x Mikrotik WAP ac LTE kit
 - 1x JetKVM
+- ca. 50 USB-Sticks (Typ Orico UFSD 64 GB USB 3.0)
 
 Die Netzwerkdokumentation steht dem Poweruser zur Verfügung.
 
@@ -35,12 +39,12 @@ Auf die PCs wurde ein Live Linux installiert. Dieses stellt sowohl das Betriebss
 - Linux ist das führende Betriebssystem für Server und im Embedded Bereich
 
 Das IKSDP Linux unterstützt zwei Betiebsmodi:
-#### Modus für Gäste und die Bevölkerung: nicht-persistenter Modus
+#### Modus für Gäste und die Bevölkerung: "nicht-persistenter Modus"
 
 Alle Änderungen werden nach einem Neustart verworfen. Somit ist sichergestellt, dass keine Benutzerdaten des Gastes oder des Internetcafe-Benutzers gespeichert werden und abhanden kommen.
 Es kann Software durch den Benutzer nachinstalliert werden, diese wird aber nach einem Neustart genau wie alle Dokumente und Einstellungen wieder verworfen.
 
-#### Modus für Schüler, Schulleitung: persistenter Modus
+#### Modus für Schüler, Schulleitung: "persistenter Modus"
 
 Hierfür wird ein USB Stick für den Benutzer oder die Benutzergruppe vorbereitet. Alle Änderungen an dem System werden auf dem USB-Stick gespeichert. Der Nutzer kann Software nachinstallieren und Dokumente erzeugen, welche nach einem Neustart wieder vorhanden sind.
 Die Daten auf dem USB Stick können optional verschlüsselt werden. Der Benutzer kann sich dann ebenfalls ein persönliches Passwort setzen.
