@@ -1,19 +1,34 @@
 # IKSDP Desktop Linux Power User Documentation  
 
-- we can choose if to encrypt the stick or not, **if the USB stick is encrypted and the password is lost, access to the documents on the stick is completly lost**
+## Creating a persistent USB-Stick
+There might be the situation where users (e.g. pubils, teachers, others) want to permanently save their data, configure the system or install specific software which should remain after the reboot. In this case it makes sense to create a persistent USB-Stick for the user.
 
-- start the shell script
-- open "terminal": e.g.:  Applications -> Utilities -> Terminal
+### Encryption
+You can choose if you want to encrypt the stick or not.  
+  **If the USB stick is encrypted and the password is lost, the access to the documents on the stick is completly lost!  
+  The user has to make sure he always remembers the password!**
+
+### Creating the Stick
+- Start the shell script
+- Open "Terminal": e.g.: Applications -> Utilities -> Terminal
 ```bash
 su - 
 ```
-- enter superuser password
-
-```
+- Enter the superuser password
+- Now start the usb creation script by typing the following in the terminal 
+```bash
 /opt/iksdp/bin/create-usb-stick.sh
 ```
-- he will prompt to select the device to prepair
-- choose the highest number
+
+- The script will prompt
+  **"Enter the number of the device you want to use: "**
+- Choose the highest number, in our case it's: **3**
+![usbstick01](../shared/images/poweruser/usbstick/usbstick01.png)
+- You receive a warning that everything is going to be removed from the stick.
+- To proceed, the stick needs to be unmounted.  
+  **"Are you sure you want to proceed? (y/n): "**
+- Choose: **y**<br>
+  ![usbstick02](../shared/images/poweruser/usbstick/usbstick02.png)
 - "do you want to proceed" -> y
 - "do you want to unmount" -> y
 - "Enter size for the first partition in MB" -> default..
