@@ -4,13 +4,31 @@
 
 Das IKSDP (International Kenian Scout Development Program) ist eine Bildungseinrichtung in Nyandiwa/Kenia. An der Einrichtung befindet sich ein Kindergarten, eine Grundschule und eine weiterführende Schule (mixed secondary school). 
 
-Für die weiterführende Schule wurde ein Computerlabor mit 5 Arbeitsplaetzen, Drucker und Internetzugang eingerichtet. Weiterhin sollen die Geräte auch von Personen aus der Umgebung genutzt werden können.
+Für die weiterführende Schule wurde ein Computerlabor mit 5 Arbeitsplaetzen, Drucker und Internetzugang eingerichtet. Weiterhin koennen die Geräte auch von Personen aus der Umgebung genutzt werden.
 
 ## Das Computerlabor
 
-Das Computerlabor soll für Schüler, Lehrer, die Schulleitung, Gäste des IKSDP und die öffentliche Bevölkerung offenstehen. Es bietet eine Office-Plattform mit Text-, Tabellenkalkulations- und weiteren Programmen zur Erstellung und Bearbeitung von Dokumenten und Behoerdenkommunikation zur Verfuegung gestellt und verfuegt ueber einen Internetzugang. Bei der Auswahl der benoetigten Hard- und Software wurde auf Kosten, frei verfuegbare Software (Open Source) und Energieeffizienz geachtet. 
+Das Computerlabor steht für Schüler, Lehrer, die Schulleitung, Gäste des IKSDP und die öffentliche Bevölkerung offen. Dafuer wurden zwei Betriebsarten definiert: fuer die Schüler, Lehrer und die Schulleitung ein dauerhafter Modus (persistenter Modus), fuer die anderen Nutzergruppen der "non-persistente Modus". 
+Es bietet eine Office-Plattform mit Text-, Tabellenkalkulations- und weiteren Programmen zur Erstellung und Bearbeitung von Dokumenten und verfuegt ueber einen Internetzugang, bspw. fuer Recherchen oder Behoerdenkommunikation. 
+Bei der Auswahl der benoetigten Hard- und Software wurde auf Kosten, frei verfuegbare Software (Open Source) und Energieeffizienz geachtet. 
+Es wurde eine umfangreiche Dokumentation fuer die unterschiedlichen Benutzergruppen erstellt und im Internet zur Verfuegung gestellt. 
+Fuer die Administration der Computer des Computerlabors wurde der stellvertretende Schulleiter gewonnen und detailliert geschult. Die Organisation des Internet-Cafees ist im Aufbau.
 
-### Technik
+### Die Betriebsarten fuer die unterschiedlichen Benutzergruppen
+Es wurden zwei Betiebsarten festgelegt:
+
+#### Modus für Schüler, Schulleitung (persistenter Modus)
+Hierfür wurde ein USB Stick für den Benutzer oder die Benutzergruppe vorbereitet. Alle Änderungen auf dem Arbeitsplatz werden auf dem USB-Stick gespeichert. Der Benutzer kann Software nachinstallieren und Dokumente erzeugen, welche nach einem Neustart des Computers wieder vorhanden sind.
+Die Daten auf dem USB Stick können optional verschlüsselt werden. Der Benutzer kann sich dann ebenfalls ein persönliches Passwort setzen. 
+
+#### Modus für Gäste und die Bevölkerung (nicht-persistenter Modus)
+Alle Änderungen werden bei einem (Neu-)Start des Computers verworfen. Somit ist sichergestellt, dass keine Benutzerdaten des Gastes oder des Internetcafe-Benutzers gespeichert werden und abhanden kommen.
+Es kann Software durch den Benutzer nachinstalliert werden, diese wird aber nach einem (Neu-)Start genau wie alle Dokumente und Einstellungen wieder verworfen.
+
+## Technik
+
+### Internetzugang
+
 Der Internetzugang wurde über Starlink installiert. Weiterhin wurde ein WLAN Accesspoint angebracht, welcher ebenfalls in der Zukunft die Rolle eines Internetrouters übernehmen könnte. Dieser hat ein LTE Modem integriert und könnte über mobile Provider wie Safaricom (4G+5G sind gut abgedeckt) genutzt werden. Somit ist das Internet theoretisch redundant aufgebaut, sollte Starlink in Zukunft abgeschalten werden.
 
 ### Hardware
@@ -38,16 +56,12 @@ Auf die PCs wurde ein Live Linux installiert. Dieses stellt sowohl das Betriebss
 - Linux ist weniger anfällig für Malware und Viren
 - Linux ist das führende Betriebssystem für Server und im Embedded Bereich
 
-Das IKSDP Linux unterstützt zwei Betiebsmodi:
-#### Modus für Gäste und die Bevölkerung: "nicht-persistenter Modus"
+Es ist eingeschraenkt moeglich eine Windows-Anwendung unter Linux zu installieren. Hierzu gaebe es verschiedene Moeglichkeiten
+- 1. die Software per Wine zu emulieren
+- 2. ein Windows ale virtuelle Maschine zu emulieren
+- 3. einen WinPE USB-Boot-Stick zu verwenden oder
+- 4. einen der Bestands-PCs umzukonfigurieren. 
 
-Alle Änderungen werden nach einem Neustart verworfen. Somit ist sichergestellt, dass keine Benutzerdaten des Gastes oder des Internetcafe-Benutzers gespeichert werden und abhanden kommen.
-Es kann Software durch den Benutzer nachinstalliert werden, diese wird aber nach einem Neustart genau wie alle Dokumente und Einstellungen wieder verworfen.
-
-#### Modus für Schüler, Schulleitung: "persistenter Modus"
-
-Hierfür wird ein USB Stick für den Benutzer oder die Benutzergruppe vorbereitet. Alle Änderungen an dem System werden auf dem USB-Stick gespeichert. Der Nutzer kann Software nachinstallieren und Dokumente erzeugen, welche nach einem Neustart wieder vorhanden sind.
-Die Daten auf dem USB Stick können optional verschlüsselt werden. Der Benutzer kann sich dann ebenfalls ein persönliches Passwort setzen.
 
 ## Open Source Projekt auf Github
  
@@ -61,7 +75,7 @@ Weiterhin sollten die PCs mindestens 2x pro Jahr aktualisiert werden.
 
 ## Remoteunterstützung
 
-Der lokale Ansprechpartner für die PC Umgebung ist Victor. Das Netzwerk ist per zerotier VPN in die Cloud verbunden. Die Supportler können sich falls benötigt über diesen VPN auf die lokalen PCs und das Netzwerkequipment verbinden.
+Der lokale Ansprechpartner für die PC Umgebung ist der stellvertretende Schulleiter (Victor). Das Netzwerk ist per zerotier VPN in die Cloud verbunden. Die Supportler können sich falls benötigt über diesen VPN auf die lokalen PCs und das Netzwerkequipment verbinden.
 
 Bei Problemen und Themen kann Victor zwischen mehreren Unterstützungswegen wählen:
 
@@ -81,4 +95,3 @@ Der Supportler startet ebenfalls die Rustdesk Anwendung bei sich und kann nun de
 Hierfür ist es notwendig, dass der Internetzugriff funktioniert.
 Der JetKVM ist für den Fall gedacht, dass ein PC nicht startet und ein Remotesupport notwendig ist. Das JetKVM Gerät wird per USB und HDMI mit einem der PCs verbunden. Der Supportler kann sich nun über einen definierten Account aus der Ferne mit dem entsprechenden PC verbinden und sogar Einstellungen im BIOS vornehmen.
 
-hier war Asko
