@@ -57,10 +57,10 @@ Auf die PCs wurde ein Live Linux installiert. Dieses stellt sowohl das Betriebss
 - Linux ist das führende Betriebssystem für Server und im Embedded Bereich
 
 Es ist eingeschraenkt moeglich eine Windows-Anwendung unter Linux zu installieren. Hierzu gaebe es verschiedene Moeglichkeiten
-- 1. die Software per Wine zu emulieren
-- 2. ein Windows ale virtuelle Maschine zu emulieren
-- 3. einen WinPE USB-Boot-Stick zu verwenden oder
-- 4. einen der Bestands-PCs umzukonfigurieren. 
+- die Software per Wine zu emulieren
+- ein Windows ale virtuelle Maschine zu emulieren
+- einen WinPE USB-Boot-Stick zu verwenden oder
+- einen der Bestands-PCs umzukonfigurieren. 
 
 
 ## Open Source Projekt auf Github
