@@ -211,19 +211,19 @@ For this reason, a JetKVM device has been set up.
 ![jetkvm00](../shared/images/poweruser/jetkvm/jetkvm00.jpg)  
 
 ### Requirements  
-You will need:
-- Internet Connection
-- 1x LAN Cable
-- 1x JetKVM Device
-- 1x HDMI to Mini HDMI Cable
-- 1x USB-A to USB-C Cable
+You will need:  
+- Internet Connection  
+- 1x LAN Cable  
+- 1x JetKVM Device  
+- 1x HDMI to Mini HDMI Cable  
+- 1x USB-A to USB-C Cable  
 ![jetkvm01](../shared/images/poweruser/jetkvm/jetkvm01.jpg)  
 
 ### Setup the JetKVM Device
 1. Connect the **USB-C Cable** to the JetKVM device
 2. Connect the **Mini HDMI Cable** to the JetKVM device
-3. Connect one end of the **LAN-Cable** to the JetKVM device  
-![jetkvm02](../shared/images/poweruser/jetkvm/jetkvm02.jpg)
+3. Connect one end of the **LAN-Cable** to the JetKVM device
+   ![jetkvm02](../shared/images/poweruser/jetkvm/jetkvm02.jpg)
 
 ### Setup the Connection for the JetKVM Device
 1. Unplug the **LAN-Cable** of port 6 (printer) from the router. The printer will not be accessible at this time.  
