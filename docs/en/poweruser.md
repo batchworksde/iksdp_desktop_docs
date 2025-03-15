@@ -211,12 +211,12 @@ For this reason, a JetKVM device has been set up.
 ![jetkvm00](../shared/images/poweruser/jetkvm/jetkvm00.jpg)  
 
 ### Requirements  
-You will need:
-- Internet Connection
-- 1x LAN Cable
-- 1x JetKVM Device
-- 1x HDMI to Mini HDMI Cable
-- 1x USB-A to USB-C Cable
+You will need:  
+- Internet Connection  
+- 1x LAN Cable  
+- 1x JetKVM Device  
+- 1x HDMI to Mini HDMI Cable  
+- 1x USB-A to USB-C Cable  
 ![jetkvm01](../shared/images/poweruser/jetkvm/jetkvm01.jpg)  
 
 ### Setup the JetKVM Device
