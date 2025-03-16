@@ -214,7 +214,7 @@ dd if=/mnt/debian-live-bookworm-0.5.0-20250313055721-amd64.hybrid.iso of=/dev/nv
 
 ```bash
 su -
-dd if=/home/user/Downloads/debian-live-FILLOUTTHIS.hybrid.iso of=/dev/nvme0p1 status=progress
+dd if=/home/user/Downloads/debian-live-FILLOUTTHIS.hybrid.iso of=/dev/nvme0n1 status=progress
 ```
 
 - if done type reboot
