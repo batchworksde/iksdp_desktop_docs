@@ -29,9 +29,16 @@ su -
   **"Are you sure you want to proceed? (y/n): "**
 - Choose: **y**<br>
   ![usbstick02](../shared/images/poweruser/usbstick/usbstick02.png)
-- "do you want to proceed" -> y
-- "do you want to unmount" -> y
-- "Enter size for the first partition in MB" -> default..
+- Now the script might tell you that the device is currently mounted and need to be unmounted before proceeding.
+- Choose: **y**<br>
+  **"Do you want to unmount it before proceeding? (y/n): "**
+  ![usbstick03](../shared/images/poweruser/usbstick/usbstick03.png)
+- The device now got unmounted.
+- You have to set the size for the partition of the stick now.  
+  **"Enter size for the first partition (in MB, default 1024): "**
+- Just press the **"Enter"-Key**
+  ![usbstick04](../shared/images/poweruser/usbstick/usbstick04.png)
+- in the next step you have 
 - do you want to encrypt the second partition? -> please choose
 - proceed anyway -> y 
 
