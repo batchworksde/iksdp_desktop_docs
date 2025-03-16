@@ -200,6 +200,25 @@ dd if=/mnt/debian-live-bookworm-0.5.0-20250313055721-amd64.hybrid.iso of=/dev/nv
 
 ![copy_image](../shared/images/netboot-step9.png)
 
+### Update possibility 3: use Image Updater
+
+- insert your personal usb stick where you downloaded the image before
+- start the PC and choose: "Live System (amd64 update)
+
+![localupdate_1](../shared/images/localupdate_1.png)
+
+- enter usename: root and the Password for the superuser
+![localupdate_2](../shared/images/localupdate_2.png)
+
+- start the terminal
+
+```bash
+su -
+dd if=/home/user/Downloads/debian-live-FILLOUTTHIS.hybrid.iso of=/dev/nvme0p1 status=progress
+```
+
+- if done type reboot
+
 ## Support via Rustdesk Remote Session
 
 ### Establish a Remote Session
