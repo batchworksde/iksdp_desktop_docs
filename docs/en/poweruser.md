@@ -287,3 +287,16 @@ On the local network, the device is accessible at [http://192.168.200.20](http:/
 2. Make sure the HDMI Cable from the Monitor is connected to the PC.
 3. Make sure the LAN Cable from the printer is connected to port 6 of the router.
 4. The printer should be accessible again and the monitor should show you the output of the PC again.
+
+## Update Wifi public password
+
+Use one of the PCs to do the following steps:
+
+1. open a browser and go to [http://192.168.200.1/webfig/#WiFi.Security.3](http://192.168.200.1/webfig/#WiFi.Security.3)
+2. select three dots menu and select "show passwords" 
+![wifi01](../shared/images/poweruser/wifi_change_01.png)
+3. enter the password into "passphrase" field.
+![wifi01](../shared/images/poweruser/wifi_change_02.png)
+and click "OK"
+
+wait 1-2 minutes for changes to be applied. Test the new password.
