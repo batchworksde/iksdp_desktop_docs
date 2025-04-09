@@ -292,11 +292,14 @@ On the local network, the device is accessible at [http://192.168.200.20](http:/
 
 Use one of the PCs to do the following steps:
 
-1. open a browser and go to [http://192.168.200.1/webfig/#WiFi.Security.3](http://192.168.200.1/webfig/#WiFi.Security.3)
-2. select three dots menu and select "show passwords" 
+1. open a browser and go to [http://192.168.200.1](http://192.168.200.1)
+2. logon with provided username and password
+3. select "Advanced"->Wifi->Security and select "publickey"
 ![wifi01](../shared/images/poweruser/wifi_change_01.png)
-3. enter the password into "passphrase" field.
+4. select three dots menu and select "show passwords" 
 ![wifi01](../shared/images/poweruser/wifi_change_02.png)
+5. enter the password into "passphrase" field.
+![wifi01](../shared/images/poweruser/wifi_change_03.png)
 and click "OK"
 
 wait 1-2 minutes for changes to be applied. Test the new password.
