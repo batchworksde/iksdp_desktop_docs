@@ -119,6 +119,75 @@ sync
 reboot
 ```
 
+### Installation auf eigener UEFI Partition
+
+Ziel ist es das System auf einer lokalen Disk zu installieren und den restlichen Speicherplatz der Disk zu nutzen (z.B. für persistente Daten statt eines USB-Sticks). Würde man die Variante aus [Produktivbetrieb](#produktivbetrieb) verwenden, würde die Partitionstabelle der Disk jedes Mal wieder komplett übeschrieben werden und die Daten verloren gehen. Mit dieser Variante werden die Daten manuell kopiert. Dafür muss das Image mit den Optionen `DEBIAN_BINARY_IMAGE="tar"` und `DEBIAN_BOOTLOADERS="grub-efi"` in der Datei `build.env` erstellt werden. Das Ergebnis ist eine tar-Datei statt einer iso-Datei.
+
+Im folgenden muss die Partionierung der lokalen Disk vorbereitet werden. Auf der Disk wird eine 512 MB große FAT32 Partition erstellt. Diese ist zum UEFI booten notwendig. Eine zweite 10 GB große ext4 Partition enthält die Dateien des IKSDP Desktops. Eine dritte Partition nutzt den restlichen Speicherplatz der Disk und kann dann für die (optional auch verschlüsselten) persistenten Daten verwendet werden. Für die einmalige Partition kann eine Live-CD wie z.B. [rescuezilla](https://rescuezilla.com/) benutzt werden:
+
+```
+parted /dev/nvme0n1
+mkpart primary fat32 1MiB 513MiB 
+set 1 esp on
+mkpart ext4 513MiB 10000MiB
+mkpart ext4 10000MiB 100%
+quit
+mkfs.fat -F32 /dev/nvme0n1p1
+mkfs.ext4 /dev/nvme0n1p2
+```
+
+Nun muss der Ordner EFI aus der tar-Datei auf die erste Partition (`/dev/nvme0n1p1`) kopiert werden. Alle anderen Ordner aus der tar-Datei werden auf die 2. Partition kopiert (`/dev/nvme0n1p2`):
+
+```
+mkdir -p /media/p1 /media/p2
+mount /dev/nvme0n1p1 /media/p1
+mount /dev/nvme0n1p2 /media/p2
+tar -xvf debian-live-bookworm-0.8.0-20250516183746-amd64.tar.tar --directory /media/p1 --strip-components 1 binary/EFI
+tar --exclude='binary/EFI' -xvf debian-live-bookworm-0.8.0-20250516183746-amd64.tar.tar --directory /tmp --strip-components 1
+```
+
+Zusätzlich muss noch einmalig eine Datei angelegt werden, die dem Bootloader mitteilt welche Block Device UUID die zweite Partition hat und zum Booten genutzt werden soll:
+
+```
+UUID=$(blkid /dev/nvme0n1p2 -s UUID -o value)
+cat <<EOT > /tmp/grub.cfg
+search.fs_uuid $UUID root
+set prefix=(\$root)'/boot/grub'
+configfile $prefix/grub.cfg
+EOT
+```
+
+Die dritte Partition kann noch für die persistenten Daten vorbereitet werden (im Beispiel inkl. Verschlüsselung):
+
+```
+/usr/sbin/cryptsetup luksFormat /dev/nvme0n1p3
+/usr/sbin/cryptsetup luksOpen /dev/nvme0n1p3 persistence
+/usr/sbin/mkfs.ext4 /dev/mapper/persistence
+/usr/sbin/e2label /dev/mapper/persistence "persistence"
+mkdir -p /mnt/p3
+mount /dev/mapper/persistence /mnt/p3
+echo "/home union" > /mnt/p3/persistence.conf
+echo "/etc/iksdp_persistent union" >> /mnt/p3/persistence.conf
+umount /mnt/p3
+/usr/sbin/cryptsetup luksClose persistence
+```
+
+Nach einem Reboot sollte der IKSDP Deskto von der lokalen Disk booten.
+
+#### Update der lokalen Disk
+
+Der Ablauf ist ähnlich wie bei [Update Möglichkeit 3](../en/poweruser.md#update-possibility-3-use-image-updater) beschrieben. Beim Booten wird die Option "Live System (amd64 update)" ausgewählt. Danach werden die Dateien auf der lokalen Disk ausgetauscht:
+
+```
+mkdir -p /media/p1 /media/p2
+mount /dev/nvme0n1p1 /media/p1
+mount /dev/nvme0n1p2 /media/p2
+tar -xvf debian-live-bookworm-0.8.0-20250516183746-amd64.tar.tar --directory /media/p1 --strip-components 1 binary/EFI
+tar --exclude='binary/EFI' -xvf debian-live-bookworm-0.8.0-20250516183746-amd64.tar.tar --directory /tmp --strip-components 1
+```
+
+Falls der Client nicht genug RAM hat um mit `toram` (Option "Live System (amd64 update)") zu booten, kann alternativ auch z.B. wieder [rescuezilla](https://rescuezilla.com/) gebootet werden und die Befehle dort ausgeführt werden.
+
 ## Image anpassen
 
 TODO
