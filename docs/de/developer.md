@@ -127,6 +127,7 @@ Im folgenden muss die Partionierung der lokalen Disk vorbereitet werden. Auf der
 
 ```
 parted /dev/nvme0n1
+mklabel gpt
 mkpart primary fat32 1MiB 513MiB 
 set 1 esp on
 mkpart ext4 513MiB 10000MiB
@@ -143,17 +144,17 @@ mkdir -p /media/p1 /media/p2
 mount /dev/nvme0n1p1 /media/p1
 mount /dev/nvme0n1p2 /media/p2
 tar -xvf debian-live-bookworm-0.8.0-20250516183746-amd64.tar.tar --directory /media/p1 --strip-components 1 binary/EFI
-tar --exclude='binary/EFI' -xvf debian-live-bookworm-0.8.0-20250516183746-amd64.tar.tar --directory /tmp --strip-components 1
+tar --exclude='binary/EFI' -xvf debian-live-bookworm-0.8.0-20250516183746-amd64.tar.tar --directory /media/p2 --strip-components 1
 ```
 
 Zusätzlich muss noch einmalig eine Datei angelegt werden, die dem Bootloader mitteilt welche Block Device UUID die zweite Partition hat und zum Booten genutzt werden soll:
 
 ```
 UUID=$(blkid /dev/nvme0n1p2 -s UUID -o value)
-cat <<EOT > /tmp/grub.cfg
+cat <<EOT > /media/p1/EFI/boot/grub.cfg
 search.fs_uuid $UUID root
 set prefix=(\$root)'/boot/grub'
-configfile $prefix/grub.cfg
+configfile \$prefix/grub.cfg
 EOT
 ```
 
@@ -164,11 +165,11 @@ Die dritte Partition kann noch für die persistenten Daten vorbereitet werden (i
 /usr/sbin/cryptsetup luksOpen /dev/nvme0n1p3 persistence
 /usr/sbin/mkfs.ext4 /dev/mapper/persistence
 /usr/sbin/e2label /dev/mapper/persistence "persistence"
-mkdir -p /mnt/p3
-mount /dev/mapper/persistence /mnt/p3
-echo "/home union" > /mnt/p3/persistence.conf
-echo "/etc/iksdp_persistent union" >> /mnt/p3/persistence.conf
-umount /mnt/p3
+mkdir -p /media/p3
+mount /dev/mapper/persistence /media/p3
+echo "/home union" > /media/p3/persistence.conf
+echo "/etc/iksdp_persistent union" >> /media/p3/persistence.conf
+umount /media/p3
 /usr/sbin/cryptsetup luksClose persistence
 ```
 
@@ -183,7 +184,7 @@ mkdir -p /media/p1 /media/p2
 mount /dev/nvme0n1p1 /media/p1
 mount /dev/nvme0n1p2 /media/p2
 tar -xvf debian-live-bookworm-0.8.0-20250516183746-amd64.tar.tar --directory /media/p1 --strip-components 1 binary/EFI
-tar --exclude='binary/EFI' -xvf debian-live-bookworm-0.8.0-20250516183746-amd64.tar.tar --directory /tmp --strip-components 1
+tar --exclude='binary/EFI' -xvf debian-live-bookworm-0.8.0-20250516183746-amd64.tar.tar --directory /media/p2 --strip-components 1
 ```
 
 Falls der Client nicht genug RAM hat um mit `toram` (Option "Live System (amd64 update)") zu booten, kann alternativ auch z.B. wieder [rescuezilla](https://rescuezilla.com/) gebootet werden und die Befehle dort ausgeführt werden.
