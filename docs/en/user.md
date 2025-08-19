@@ -60,7 +60,12 @@ Once the installation is complete, the software can be launched by clicking "Ope
 
 The system can be shut down by clicking the "Power" button in the top right corner ![Shutdown01](../shared/images/shutdown_power_symbol.png).  
 Click the "Power" button and then "Power Off..."  
-![Shutdown02](../shared/images/shutdown_power_menu.png)  
+![Shutdown02](../shared/images/shutdown_power_menu.png) 
+
+## printing
+
+here we going to document printing in furture.
+
 
 A "Power Off" dialog will appear. Click the "Power Off" button to shut down the system.  
 ![Shutdown03](../shared/images/shutdown_dialog.png)
