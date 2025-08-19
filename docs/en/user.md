@@ -62,10 +62,9 @@ The system can be shut down by clicking the "Power" button in the top right corn
 Click the "Power" button and then "Power Off..."  
 ![Shutdown02](../shared/images/shutdown_power_menu.png) 
 
-## printing
-
-here we going to document printing in furture.
-
-
 A "Power Off" dialog will appear. Click the "Power Off" button to shut down the system.  
 ![Shutdown03](../shared/images/shutdown_dialog.png)
+
+## printing
+
+here we going to document printing in future.
