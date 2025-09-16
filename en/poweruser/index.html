@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Poweruser Documentation - IKSDP Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Poweruser Documentation";
+        var mkdocs_page_input_path = "en/poweruser.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IKSDP Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../project/">Project Documentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >User Documentation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../user/">General</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../user/how-to-jitsi/">Jitsi Meeting Tool</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Poweruser Documentation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-persistent-usb-stick">Creating a persistent USB-Stick</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#encryption">Encryption</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-the-stick">Creating the Stick</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update-the-operating-system">Update the Operating System</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#download-latest-image-and-copy-to-central-storage">Download latest image and copy to central storage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-possibility-1-update-using-the-network">Update possibility 1: Update using the network</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-possibility-2-use-usb-stick">Update possibility 2: use USB Stick</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ensure-usb-boot-is-enabled">ensure usb boot is enabled</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#always">always</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-possibility-3-use-image-updater">Update possibility 3: use Image Updater</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#support-via-rustdesk-remote-session">Support via Rustdesk Remote Session</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#establish-a-remote-session">Establish a Remote Session</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stop-the-remote-session">Stop the Remote Session</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#remote-support-using-jetkvm">Remote Support Using JetKVM</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-the-jetkvm-device">Setup the JetKVM Device</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-the-connection-for-the-jetkvm-device">Setup the Connection for the JetKVM Device</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#closing-the-connection-for-the-jetkvm-device">Closing the Connection for the JetKVM Device</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update-wifi-public-password">Update Wifi public password</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../developer/">Developer Documentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deutsch</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/project/">Projektdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Benutzerdokumentation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../de/user/">Allgemein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../de/user/how-to-jitsi/">Jitsi Videokonferenz</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/poweruser/">Poweruserdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/developer/">Entwicklerdokumentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Italiano</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../it/project/">Documentazione di progetto</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Documentazione per l'utente</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../it/user/">Generale</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../it/user/how-to-jitsi/">Videoconferenza Jitsi</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../it/poweruser/">Documentazione per Poweruser</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../it/developer/">Documentazione per sviluppatori</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IKSDP Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">English</li>
+      <li class="breadcrumb-item active">Poweruser Documentation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="iksdp-desktop-linux-power-user-documentation">IKSDP Desktop Linux Power User Documentation</h1>
+<h2 id="creating-a-persistent-usb-stick">Creating a persistent USB-Stick</h2>
+<p>There might be the situation where users (e.g. pubils, teachers, others) want to permanently save their data, configure the system or install specific software which should remain after the reboot. In this case it makes sense to create a persistent USB-Stick for the user.</p>
+<h3 id="encryption">Encryption</h3>
+<p>You can choose if you want to encrypt the stick or not.<br />
+<strong>If the USB stick is encrypted and the password is lost, the access to the documents on the stick is completly lost!<br />
+  The user has to make sure he always remembers the password!</strong></p>
+<h3 id="creating-the-stick">Creating the Stick</h3>
+<ul>
+<li>Start the shell script</li>
+<li>Open "Terminal": e.g.: Applications -&gt; Utilities -&gt; Terminal</li>
+</ul>
+<pre><code class="language-bash">su - 
+</code></pre>
+<ul>
+<li>Enter the superuser password</li>
+<li>Now start the usb creation script by typing the following in the terminal </li>
+</ul>
+<pre><code class="language-bash">/opt/iksdp/bin/create-usb-stick.sh
+</code></pre>
+<ul>
+<li>The script will prompt
+  <strong>"Enter the number of the device you want to use: "</strong></li>
+<li>Choose the highest number, in our case it's: <strong>3</strong>
+<img alt="usbstick01" src="../../shared/images/poweruser/usbstick/usbstick01.png" /></li>
+<li>You receive a warning that everything is going to be removed from the stick.</li>
+<li>To proceed, the stick needs to be unmounted.<br />
+<strong>"Are you sure you want to proceed? (y/n): "</strong></li>
+<li>Choose: <strong>y</strong><br>
+  <img alt="usbstick02" src="../../shared/images/poweruser/usbstick/usbstick02.png" /></li>
+<li>Now the script might tell you that the device is currently mounted and need to be unmounted before proceeding.</li>
+<li>Choose: <strong>y</strong><br>
+  <strong>"Do you want to unmount it before proceeding? (y/n): "</strong>
+  <img alt="usbstick03" src="../../shared/images/poweruser/usbstick/usbstick03.png" /></li>
+<li>The device now got unmounted.</li>
+<li>You have to set the size for the partition of the stick now.<br />
+<strong>"Enter size for the first partition (in MB, default 1024): "</strong></li>
+<li>Just press the <strong>"Enter"-Key</strong>
+  <img alt="usbstick04" src="../../shared/images/poweruser/usbstick/usbstick04.png" /></li>
+<li>in the next step you have </li>
+<li>do you want to encrypt the second partition? -&gt; please choose</li>
+<li>proceed anyway -&gt; y </li>
+</ul>
+<h2 id="update-the-operating-system">Update the Operating System</h2>
+<h3 id="download-latest-image-and-copy-to-central-storage">Download latest image and copy to central storage</h3>
+<ul>
+<li>download the newest image (.hybrid.iso) from the distribution share <a href="http://iksdp.pfadfinderzentrum.org">http://iksdp.pfadfinderzentrum.org</a></li>
+<li>to get connection to storage on router</li>
+<li>open terminal -&gt; windows key -&gt; type "terminal"</li>
+<li>enter:</li>
+</ul>
+<pre><code class="language-bash">su - 
+mount -t nfs 192.168.200.1:/usb2-part1/smb /mnt
+</code></pre>
+<ul>
+<li>to copy the downloaded image file to /mnt</li>
+</ul>
+<p><img alt="user-copy1" src="../../shared/images/poweruser-copy1.png" /></p>
+<p><img alt="user-copy2" src="../../shared/images/poweruser-copy2.png" /></p>
+<ul>
+<li>/mnt is show in "other Locations" -&gt; Debian GNU/Linux</li>
+</ul>
+<p><img alt="user-copy3" src="../../shared/images/poweruser-copy3.png" /></p>
+<ul>
+<li>you will need to type superuser password twice</li>
+</ul>
+<p><img alt="user-copy4" src="../../shared/images/poweruser-copy4.png" /></p>
+<ul>
+<li>indicator will show status of the copy job</li>
+</ul>
+<p><img alt="user-copy5" src="../../shared/images/poweruser-copy5.png" /></p>
+<h3 id="update-possibility-1-update-using-the-network">Update possibility 1: Update using the network</h3>
+<ul>
+<li>start the pc to update and hit "Delete" Button - at black screen and hit delete multiple times.</li>
+<li>use keyboard to select boot and ensure "Network UEFI:.." is selected as Boot Option #1</li>
+</ul>
+<p><img alt="biossettings" src="../../shared/images/netboot-bios1.png" /></p>
+<ul>
+<li>select save+exit -&gt; save settings and exit</li>
+</ul>
+<p><img alt="bios_save_exit" src="../../shared/images/netboot-bios2.png" /></p>
+<ul>
+<li>this screen might occur.. reboot at this step and hit F7 after boot</li>
+</ul>
+<p><img alt="bios_save_exit" src="../../shared/images/netboot-error1.png" /></p>
+<ul>
+<li>this is the correct bootscreen hit enter</li>
+</ul>
+<p><img alt="step1" src="../../shared/images/netboot-step1.png" /></p>
+<ul>
+<li>select "Upgrade IKSDP"</li>
+</ul>
+<p><img alt="step2" src="../../shared/images/netboot-step2.png" /></p>
+<ul>
+<li>when updater is started completely it will look like this</li>
+</ul>
+<p><img alt="step3" src="../../shared/images/netboot-step3.png" /></p>
+<ul>
+<li>enter the folling commands to connect to central storage and attach it to the /mnt directory</li>
+</ul>
+<pre><code class="language-bash">sudo bash
+mount -t nfs 192.168.200.1:/usb2-part1/smb /mnt
+</code></pre>
+<ul>
+<li>correct output will be something like this</li>
+</ul>
+<p><img alt="step4" src="../../shared/images/netboot-step4.png" /></p>
+<ul>
+<li>copy the image using the dd command to the NVME Harddisk of the pc - <strong>ensure your image name is correct</strong></li>
+</ul>
+<pre><code class="language-bash">dd if=/mnt/debian-live-bookworm-0.5.0-20250313055721-amd64.hybrid.iso of=/dev/nvme0n1 status=progress
+</code></pre>
+<p><img alt="copy_image" src="../../shared/images/netboot-step5.png" /></p>
+<ul>
+<li>run reboot command</li>
+</ul>
+<p><img alt="copy_image" src="../../shared/images/netboot-step6.png" /></p>
+<ul>
+<li>enter BIOS setup using the Delete button at start</li>
+</ul>
+<p><img alt="copy_image" src="../../shared/images/netboot-step7.png" /></p>
+<ul>
+<li>select boot and ensure "NVME" is selected as Boot Option #1</li>
+</ul>
+<p><img alt="copy_image" src="../../shared/images/netboot-step8.png" /></p>
+<ul>
+<li>select save+exit -&gt; save settings and exit</li>
+</ul>
+<p><img alt="bios_save_exit" src="../../shared/images/netboot-bios2.png" /></p>
+<ul>
+<li>check that image have a higher version now</li>
+</ul>
+<p><img alt="copy_image" src="../../shared/images/netboot-step9.png" /></p>
+<ul>
+<li>Done</li>
+</ul>
+<h3 id="update-possibility-2-use-usb-stick">Update possibility 2: use USB Stick</h3>
+<h4 id="ensure-usb-boot-is-enabled">ensure usb boot is enabled</h4>
+<ul>
+<li>start the pc to update and hit "Delete" Button - at black screen and hit delete multiple times.</li>
+<li>use keyboard to select boot and ensure <strong>"USB"</strong> is selected as Boot Option #1</li>
+</ul>
+<p><img alt="biossettings" src="../../shared/images/bios_boot_usb.png" /></p>
+<ul>
+<li>press F10 to save &amp; exit</li>
+<li>reboot the PC</li>
+</ul>
+<h4 id="always">always</h4>
+<ul>
+<li>enter special usb update stick</li>
+<li>select "try or install ubuntu"</li>
+</ul>
+<p><img alt="biossettings" src="../../shared/images/usb_boot_step1.png" /></p>
+<ul>
+<li>wait for the "Welcome to Ubuntu" to start fully</li>
+<li>when "choose your language" appears you can close the windows using the X</li>
+</ul>
+<p><img alt="biossettings" src="../../shared/images/usb_boot_step2.png" /></p>
+<ul>
+<li>start "terminal"</li>
+</ul>
+<p><img alt="biossettings" src="../../shared/images/usb_boot_step3.png" /></p>
+<ul>
+<li>run commands to connect to central storage</li>
+</ul>
+<pre><code class="language-bash">sudo bash
+mount -t cifs -o username=user,password=live //192.168.200.1/smb /mnt
+</code></pre>
+<p><img alt="biossettings" src="../../shared/images/usb_boot_step4.png" /></p>
+<ul>
+<li>update nvme harddisk using the commands</li>
+</ul>
+<pre><code class="language-bash">dd if=/mnt/debian-live-bookworm-0.5.0-20250313055721-amd64.hybrid.iso of=/dev/nvme0n1 status=progress
+</code></pre>
+<p><img alt="biossettings" src="../../shared/images/usb_boot_step5.png" /></p>
+<ul>
+<li>type "reboot"</li>
+<li>pull out update stick and press enter when prompted</li>
+</ul>
+<p><img alt="biossettings" src="../../shared/images/usb_boot_step6.png" /></p>
+<ul>
+<li>check that image have a higher version now</li>
+</ul>
+<p><img alt="copy_image" src="../../shared/images/netboot-step9.png" /></p>
+<h3 id="update-possibility-3-use-image-updater">Update possibility 3: use Image Updater</h3>
+<ul>
+<li>insert your personal usb stick where you downloaded the image before</li>
+<li>start the PC and choose: "Live System (amd64 update)</li>
+</ul>
+<p><img alt="localupdate_1" src="../../shared/images/localupdate_1.png" /></p>
+<ul>
+<li>
+<p>enter usename: root and the Password for the superuser
+<img alt="localupdate_2" src="../../shared/images/localupdate_2.png" /></p>
+</li>
+<li>
+<p>start the terminal</p>
+</li>
+</ul>
+<pre><code class="language-bash">su -
+dd if=/home/user/Downloads/debian-live-FILLOUTTHIS.hybrid.iso of=/dev/nvme0n1 status=progress
+</code></pre>
+<ul>
+<li>if done type reboot</li>
+</ul>
+<h2 id="support-via-rustdesk-remote-session">Support via Rustdesk Remote Session</h2>
+<h3 id="establish-a-remote-session">Establish a Remote Session</h3>
+<ol>
+<li>Open the application <strong>"Rustdesk"</strong> by pressing <strong>"Windows"-Key</strong> and then start typing <strong>"Rustdesk"</strong>.</li>
+<li>Now click the <strong>"Rustdesk"-Icon</strong>.<br />
+<img alt="Rustdesk00" src="../../shared/images/poweruser/rustdesk/rustdesk00.png" /></li>
+<li>A different way to start Rustdesk would be by opening the Applications Tab in the taskbar at the top and then click on <strong>"Internet"</strong> and <strong>"Rustdesk"</strong>.<br />
+<img alt="Rustdesk01" src="../../shared/images/poweruser/rustdesk/rustdesk01.png" /></li>
+<li>Now you will send the <strong>"ID"</strong> and the <strong>"One-time Password"</strong> which you can see on the left side to the person you want to receive Support from.<br />
+<img alt="Rustdesk02" src="../../shared/images/poweruser/rustdesk/rustdesk02.png" /></li>
+<li>A small window might appear which shows that a device wants to connect to your Computer. Normally the connection gets automatically established. If not, click the <strong>"Accept"</strong> Button.<br />
+<img alt="Rustdesk03" src="../../shared/images/poweruser/rustdesk/rustdesk03.png" /></li>
+<li>If its the first time someone connects to your Computer then you will have to select the screen which should be shared. Select the screen, tick the box <strong>"Remember this selection"</strong> and then click <strong>"Share"</strong>.<br />
+<img alt="Rustdesk04" src="../../shared/images/poweruser/rustdesk/rustdesk04.png" /></li>
+<li>If you see this little icon in the top taskbar, then the connection is established.<br />
+<img alt="Rustdesk05" src="../../shared/images/poweruser/rustdesk/rustdesk05.png" /></li>
+</ol>
+<h3 id="stop-the-remote-session">Stop the Remote Session</h3>
+<ol>
+<li>Move your mouse over the <strong>"Rustdesk"-Icon</strong> in the left sidebar. Now two smaller windows should appear next to the sidebar.</li>
+<li>Click on the window which shows the active connection.<br />
+<img alt="Rustdesk07" src="../../shared/images/poweruser/rustdesk/rustdesk07.png" /></li>
+<li>Now the <strong>"Connection"-Window</strong> should appear on the screen.</li>
+<li>Click <strong>"Disconnect"</strong> to end the remote session.<br />
+<img alt="Rustdesk08" src="../../shared/images/poweruser/rustdesk/rustdesk08.png" /></li>
+<li>The small icon in the top taskbar <img alt="Rustdesk09" src="../../shared/images/poweruser/rustdesk/rustdesk09.png" /> should now be disappeared, which means the connection is closed for the remote device.</li>
+</ol>
+<h2 id="remote-support-using-jetkvm">Remote Support Using JetKVM</h2>
+<p>There might be situations where the support team needs to connect directly to a local computer.<br />
+For this reason, a JetKVM device has been set up.<br />
+<img alt="jetkvm00" src="../../shared/images/poweruser/jetkvm/jetkvm00.jpg" />  </p>
+<h3 id="requirements">Requirements</h3>
+<p>You will need:<br />
+- Internet Connection<br />
+- 1x LAN Cable<br />
+- 1x JetKVM Device<br />
+- 1x HDMI to Mini HDMI Cable<br />
+- 1x USB-A to USB-C Cable<br />
+<img alt="jetkvm01" src="../../shared/images/poweruser/jetkvm/jetkvm01.jpg" />  </p>
+<h3 id="setup-the-jetkvm-device">Setup the JetKVM Device</h3>
+<ol>
+<li>Connect the <strong>USB-C Cable</strong> to the JetKVM device</li>
+<li>Connect the <strong>Mini HDMI Cable</strong> to the JetKVM device</li>
+<li>Connect one end of the <strong>LAN-Cable</strong> to the JetKVM device<br />
+<img alt="jetkvm02" src="../../shared/images/poweruser/jetkvm/jetkvm02.jpg" /></li>
+</ol>
+<h3 id="setup-the-connection-for-the-jetkvm-device">Setup the Connection for the JetKVM Device</h3>
+<ol>
+<li>Unplug the <strong>LAN-Cable</strong> of port 6 (printer) from the router. The printer will not be accessible at this time.<br />
+<img alt="jetkvm03" src="../../shared/images/poweruser/jetkvm/jetkvm03.jpg" /></li>
+<li>Plug in the other end of the <strong>LAN-Cable</strong> which is already connected to the JetKVM device.<br />
+<img alt="jetkvm04" src="../../shared/images/poweruser/jetkvm/jetkvm04.jpg" /></li>
+<li>Now unplug the <strong>HDMI Cable</strong> which is currently connected to the PC (this one belongs to the monitor).<br />
+<img alt="jetkvm05" src="../../shared/images/poweruser/jetkvm/jetkvm05.jpg" /></li>
+<li>Now plug in the <strong>HDMI Cable</strong> and the <strong>USB-A Cable</strong> from the JetKVM device to the PC. During the support session you are not able to see the output of the monitor. The screen stays black, because the output goes to the JetKVM device.<br />
+<img alt="jetkvm06" src="../../shared/images/poweruser/jetkvm/jetkvm06.jpg" /></li>
+<li>If everything is correctly connected you will see the IP <strong>192.168.200.20</strong> on the screen of the JetKVM device. You also see that <strong>USB</strong> and <strong>HDMI</strong> is connected.<br />
+<img alt="jetkvm07" src="../../shared/images/poweruser/jetkvm/jetkvm07.jpg" /></li>
+<li>At this point the support team is able to connect to the PC via VPN or cloud.</li>
+</ol>
+<p>On the local network, the device is accessible at <a href="http://192.168.200.20">http://192.168.200.20</a>.</p>
+<h3 id="closing-the-connection-for-the-jetkvm-device">Closing the Connection for the JetKVM Device</h3>
+<ol>
+<li>Revert the steps from the <a href="#setup-the-connection-for-the-jetkvm-device">setup part</a> starting with step 4.</li>
+<li>Make sure the HDMI Cable from the Monitor is connected to the PC.</li>
+<li>Make sure the LAN Cable from the printer is connected to port 6 of the router.</li>
+<li>The printer should be accessible again and the monitor should show you the output of the PC again.</li>
+</ol>
+<h2 id="update-wifi-public-password">Update Wifi public password</h2>
+<p>Use one of the PCs to do the following steps:</p>
+<ol>
+<li>open a browser and go to <a href="http://192.168.200.1">http://192.168.200.1</a></li>
+<li>logon with provided username and password</li>
+<li>select "Advanced"-&gt;Wifi-&gt;Security and select "publickey"
+<img alt="wifi01" src="../../shared/images/poweruser/wifi_change_01.png" /></li>
+<li>select three dots menu and select "show passwords" 
+<img alt="wifi01" src="../../shared/images/poweruser/wifi_change_02.png" /></li>
+<li>enter the password into "passphrase" field.
+<img alt="wifi01" src="../../shared/images/poweruser/wifi_change_03.png" />
+and click "OK"</li>
+</ol>
+<p>wait 1-2 minutes for changes to be applied. Test the new password.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../user/how-to-jitsi/" class="btn btn-neutral float-left" title="Jitsi Meeting Tool"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../developer/" class="btn btn-neutral float-right" title="Developer Documentation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../user/how-to-jitsi/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../developer/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/open_in_new_tab.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

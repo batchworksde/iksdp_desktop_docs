@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Jitsi Meeting Tool - IKSDP Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Jitsi Meeting Tool";
+        var mkdocs_page_input_path = "en/user/how-to-jitsi.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> IKSDP Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../project/">Project Documentation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >User Documentation</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">General</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Jitsi Meeting Tool</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#general-information">General Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-starting-a-jitsi-meeting">1. Starting a Jitsi Meeting</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#step-1-open-jitsi-meet">Step 1: Open Jitsi Meet</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#step-2-create-a-new-meeting">Step 2: Create a New Meeting</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#step-3-grant-browser-permissions">Step 3: Grant Browser Permissions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#step-4-set-your-name-and-join-the-meeting">Step 4: Set Your Name and Join the Meeting</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#step-5-log-in-only-required-for-the-organizer">Step 5: Log in (only required for the Organizer)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-inviting-participants">2. Inviting Participants</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#step-1-share-the-meeting-link">Step 1: Share the Meeting Link</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-during-the-meeting">3. During the Meeting</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#controlling-microphone-and-camera">Controlling Microphone and Camera:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#screen-sharing">Screen Sharing:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ending-the-meeting">Ending the Meeting:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-tips">Additional Tips</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../poweruser/">Poweruser Documentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../developer/">Developer Documentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deutsch</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../de/project/">Projektdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Benutzerdokumentation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../de/user/">Allgemein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../de/user/how-to-jitsi/">Jitsi Videokonferenz</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../de/poweruser/">Poweruserdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../de/developer/">Entwicklerdokumentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Italiano</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../it/project/">Documentazione di progetto</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Documentazione per l'utente</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../it/user/">Generale</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../it/user/how-to-jitsi/">Videoconferenza Jitsi</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../it/poweruser/">Documentazione per Poweruser</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../it/developer/">Documentazione per sviluppatori</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">IKSDP Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">English</li>
+          <li class="breadcrumb-item">User Documentation</li>
+      <li class="breadcrumb-item active">Jitsi Meeting Tool</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="user-guide-creating-a-jitsi-meeting-in-the-browser-and-inviting-participants">User Guide: Creating a Jitsi Meeting in the Browser and Inviting Participants</h1>
+<h2 id="general-information">General Information</h2>
+<p>Jitsi is a free, open-source video conferencing solution that can be used directly in the browser. It allows you to easily create online meetings. Jitsi offers features such as screen sharing, chat, and the option to secure meetings with a password. To create a meeting, you need to log in. Other participants can join the meeting without an account.</p>
+<h2 id="1-starting-a-jitsi-meeting">1. Starting a Jitsi Meeting</h2>
+<h3 id="step-1-open-jitsi-meet">Step 1: Open Jitsi Meet</h3>
+<ol>
+<li>Open your web browser (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge).</li>
+<li>Go to the Jitsi Meet website: <a href="https://meet.jit.si">https://meet.jit.si</a></li>
+</ol>
+<h3 id="step-2-create-a-new-meeting">Step 2: Create a New Meeting</h3>
+<ol>
+<li>On the homepage, you will see a field with a generated meeting name.
+<img alt="Jitsi01" src="../../../shared/images/user/jitsi/jitsi16.png" /></li>
+<li>Enter a unique name for your meeting (e.g., “IKSDP-MEETING”).
+<img alt="Jitsi02" src="../../../shared/images/user/jitsi/jitsi01.png" /></li>
+<li>Click <strong>“Start Meeting”</strong> or press the <strong>Enter key</strong>.</li>
+</ol>
+<h3 id="step-3-grant-browser-permissions">Step 3: Grant Browser Permissions</h3>
+<ol>
+<li>If you are using Jitsi Meet for the first time, your browser will ask for access to your <strong>microphone and camera</strong>.</li>
+<li>Allow access so you can participate in the video conference.
+<img alt="Jitsi03" src="../../../shared/images/user/jitsi/jitsi14.png" /></li>
+</ol>
+<h3 id="step-4-set-your-name-and-join-the-meeting">Step 4: Set Your Name and Join the Meeting</h3>
+<ol>
+<li>You will now see an input box where you can enter your name.
+<img alt="Jitsi04" src="../../../shared/images/user/jitsi/jitsi03.png" /></li>
+<li>You can then enable or disable your microphone <img alt="Jitsi05" src="../../../shared/images/user/jitsi/jitsi04.png" /> and camera <img alt="Jitsi06" src="../../../shared/images/user/jitsi/jitsi05.png" />.</li>
+<li>Click the "Join Meeting" button to enter the video conference.<br />
+<img alt="Jitsi07" src="../../../shared/images/user/jitsi/jitsi06.png" /></li>
+</ol>
+<h3 id="step-5-log-in-only-required-for-the-organizer">Step 5: Log in (only required for the Organizer)</h3>
+<ol>
+<li>You will now be prompted to log in to start the meeting.</li>
+<li>Click "Log in".<br />
+<img alt="Jitsi08" src="../../../shared/images/user/jitsi/jitsi07.png" /></li>
+<li>You can choose from different login providers. In this guide, we will use a Google account. Click the "Sign in with Google" button.<br />
+<img alt="Jitsi09" src="../../../shared/images/user/jitsi/jitsi08.png" /></li>
+<li>Click on your account. If no account is already signed in, you will need to log in with your Google account first.<br />
+<img alt="Jitsi10" src="../../../shared/images/user/jitsi/jitsi09.png" /></li>
+<li>Now click the "Continue" button.<br />
+<img alt="Jitsi11" src="../../../shared/images/user/jitsi/jitsi11.png" /></li>
+<li>You should now be successfully logged in, and the video conference should start.<br />
+<img alt="Jitsi12" src="../../../shared/images/user/jitsi/jitsi12.png" /></li>
+</ol>
+<hr />
+<h2 id="2-inviting-participants">2. Inviting Participants</h2>
+<h3 id="step-1-share-the-meeting-link">Step 1: Share the Meeting Link</h3>
+<ol>
+<li>Click the <strong>“Invite People”</strong> icon at the bottom right.<br />
+<img alt="Jitsi16" src="../../../shared/images/user/jitsi/jitsi17.png" /></li>
+<li>A pop-up window will appear with the <strong>meeting link</strong>.</li>
+<li>Copy this link and share it via <strong>email, messenger, or other chat tools</strong>.<br />
+<img alt="Jitsi13" src="../../../shared/images/user/jitsi/jitsi13.png" /></li>
+</ol>
+<hr />
+<h2 id="3-during-the-meeting">3. During the Meeting</h2>
+<h3 id="controlling-microphone-and-camera">Controlling Microphone and Camera:</h3>
+<ul>
+<li><strong>Mute microphone</strong>: Click the <strong>microphone icon</strong> at the bottom.</li>
+<li><strong>Turn off camera</strong>: Click the <strong>camera icon</strong> at the bottom.</li>
+</ul>
+<h3 id="screen-sharing">Screen Sharing:</h3>
+<ol>
+<li>Click the <strong>screen sharing icon</strong>.</li>
+<li>Choose whether to share your entire screen, a window, or a tab.</li>
+<li>Click <strong>“Share”</strong>.</li>
+</ol>
+<h3 id="ending-the-meeting">Ending the Meeting:</h3>
+<ul>
+<li>Click the <strong>red phone icon</strong> to leave or end the meeting.</li>
+</ul>
+<hr />
+<h2 id="additional-tips">Additional Tips</h2>
+<ul>
+<li>Use the <strong>chat</strong> (bottom left) for notes or links.</li>
+<li>If you experience connection issues, switching to <strong>Google Chrome</strong> may help.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="General"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../poweruser/" class="btn btn-neutral float-right" title="Poweruser Documentation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../poweruser/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/open_in_new_tab.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
