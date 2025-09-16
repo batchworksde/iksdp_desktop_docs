@@ -68,3 +68,4 @@ A "Power Off" dialog will appear. Click the "Power Off" button to shut down the 
 ## printing
 
 Here we going to document printing in future. We are using the Epson [L6290 printer](https://www.epson.eu/en_EU/support/sc/epson-l6290/s/s1944).
+This is just the test update for printing.
