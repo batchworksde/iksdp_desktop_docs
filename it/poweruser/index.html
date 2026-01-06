@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Documentazione per Poweruser - IKSDP Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Documentazione per Poweruser";
+        var mkdocs_page_input_path = "it/poweruser.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IKSDP Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/project/">Project Documentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >User Documentation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../en/user/">General</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../en/user/how-to-jitsi/">Jitsi Meeting Tool</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/poweruser/">Poweruser Documentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/developer/">Developer Documentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deutsch</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/project/">Projektdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Benutzerdokumentation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../de/user/">Allgemein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../de/user/how-to-jitsi/">Jitsi Videokonferenz</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/poweruser/">Poweruserdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/developer/">Entwicklerdokumentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Italiano</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../project/">Documentazione di progetto</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Documentazione per l'utente</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../user/">Generale</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../user/how-to-jitsi/">Videoconferenza Jitsi</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Documentazione per Poweruser</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creare-una-chiavetta-usb-per-un-utente">Creare una chiavetta USB per un utente</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aggiornare-il-sistema-operativo">Aggiornare il sistema operativo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#supporto-tramite-sessione-remota-con-rustdesk">Supporto tramite Sessione Remota con Rustdesk</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#avviare-una-sessione-remota">Avviare una Sessione Remota</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#terminare-la-sessione-remota">Terminare la Sessione Remota</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../developer/">Documentazione per sviluppatori</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IKSDP Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Italiano</li>
+      <li class="breadcrumb-item active">Documentazione per Poweruser</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="documentazione-per-utenti-avanzati-di-iksdp-desktop-linux">Documentazione per utenti avanzati di IKSDP Desktop Linux</h1>
+<h2 id="creare-una-chiavetta-usb-per-un-utente">Creare una chiavetta USB per un utente</h2>
+<p>TODO  </p>
+<h2 id="aggiornare-il-sistema-operativo">Aggiornare il sistema operativo</h2>
+<p>TODO</p>
+<pre><code class="language-bash">mount -t nfs 192.168.200.1:/usb2-part1 /mnt
+dd if=/mnt/smb/debian-live* of=/dev/nvme0n1 status=progress 
+</code></pre>
+<h2 id="supporto-tramite-sessione-remota-con-rustdesk">Supporto tramite Sessione Remota con Rustdesk</h2>
+<h3 id="avviare-una-sessione-remota">Avviare una Sessione Remota</h3>
+<ol>
+<li>Apri l'applicazione <strong>"Rustdesk"</strong> premendo il tasto <strong>"Windows"</strong> e iniziando a digitare <strong>"Rustdesk"</strong>.  </li>
+<li>Ora fai clic sull'icona <strong>"Rustdesk"</strong>.<br />
+<img alt="Rustdesk00" src="../../shared/images/poweruser/rustdesk/rustdesk00.png" />  </li>
+<li>Un altro modo per avviare Rustdesk è aprire la scheda Applicazioni nella barra delle applicazioni in alto e poi fare clic su <strong>"Internet"</strong> e <strong>"Rustdesk"</strong>.<br />
+<img alt="Rustdesk01" src="../../shared/images/poweruser/rustdesk/rustdesk01.png" />  </li>
+<li>Ora invia il tuo <strong>"ID"</strong> e la tua <strong>"One-time Password"</strong>, che puoi vedere sulla sinistra, alla persona da cui vuoi ricevere supporto.<br />
+<img alt="Rustdesk02" src="../../shared/images/poweruser/rustdesk/rustdesk02.png" />  </li>
+<li>Potrebbe apparire una piccola finestra che indica che un dispositivo vuole connettersi al tuo computer. Normalmente la connessione viene stabilita automaticamente. Se ciò non accade, fai clic sul pulsante <strong>"Accept"</strong>.<br />
+<img alt="Rustdesk03" src="../../shared/images/poweruser/rustdesk/rustdesk03.png" />  </li>
+<li>Se è la prima volta che qualcuno si connette al tuo computer, dovrai selezionare lo schermo da condividere. Seleziona lo schermo, spunta la casella <strong>"Remember this selection"</strong> e poi fai clic su <strong>"Share"</strong>.<br />
+<img alt="Rustdesk04" src="../../shared/images/poweruser/rustdesk/rustdesk04.png" />  </li>
+<li>Se vedi questa piccola icona nella barra delle applicazioni in alto, significa che la connessione è attiva.<br />
+<img alt="Rustdesk05" src="../../shared/images/poweruser/rustdesk/rustdesk05.png" />  </li>
+</ol>
+<h3 id="terminare-la-sessione-remota">Terminare la Sessione Remota</h3>
+<ol>
+<li>Sposta il mouse sopra l'icona <strong>"Rustdesk"</strong> nella barra laterale sinistra. Ora dovrebbero apparire due piccole finestre accanto alla barra laterale.  </li>
+<li>Fai clic sulla finestra che mostra la connessione attiva.<br />
+<img alt="Rustdesk07" src="../../shared/images/poweruser/rustdesk/rustdesk07.png" />  </li>
+<li>Ora dovrebbe apparire sullo schermo la finestra <strong>"Connessione"</strong>.  </li>
+<li>Fai clic su <strong>"Disconnect"</strong> per terminare la sessione remota.<br />
+<img alt="Rustdesk08" src="../../shared/images/poweruser/rustdesk/rustdesk08.png" />  </li>
+<li>La piccola icona nella barra delle applicazioni in alto <img alt="Rustdesk09" src="../../shared/images/poweruser/rustdesk/rustdesk09.png" /> dovrebbe ora scomparire, il che significa che la connessione è stata chiusa per il dispositivo remoto.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../user/how-to-jitsi/" class="btn btn-neutral float-left" title="Videoconferenza Jitsi"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../developer/" class="btn btn-neutral float-right" title="Documentazione per sviluppatori">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../user/how-to-jitsi/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../developer/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/open_in_new_tab.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
