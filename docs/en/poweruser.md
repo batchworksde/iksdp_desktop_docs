@@ -207,10 +207,10 @@ dd if=/mnt/debian-live-bookworm-0.5.0-20250313055721-amd64.hybrid.iso of=/dev/nv
 
 ![localupdate_1](../shared/images/localupdate_1.png)
 
-- enter usename: root and the Password for the superuser
+- enter username: root and the Password for the superuser
 ![localupdate_2](../shared/images/localupdate_2.png)
 
-- start the terminal
+- start the terminal and become superuser
 
 ```bash
 su -
@@ -218,6 +218,48 @@ dd if=/home/user/Downloads/debian-live-FILLOUTTHIS.hybrid.iso of=/dev/nvme0n1 st
 ```
 
 - if done type reboot
+
+### Update possibility 4: use Updater Script
+
+Starting with version 0.10.0 there is a updater script included in the image. This way is preferred way to update, but you will need to have
+version v0.10.0 or higher installed. 
+
+You can use insert your personal usb stick while booting to enter persistent mode. This will
+will help to update multiple pcs as the image will be only downloaded once. 
+
+steps:
+- start the PC and choose: "Live System (amd64 update)"
+
+![localupdate_1](../shared/images/localupdate_1.png)
+
+- enter username: root and the Password for the superuser
+![localupdate_2](../shared/images/localupdate_2.png)
+
+- verify that you are in update mode. This will be displayed by a "U" in upper system panel.
+
+![verify_update_mode](../shared/images/verify_update_mode.png)
+
+- start the terminal and enter /opt/iksdp/bin/update-from-iso.sh
+
+```bash
+su - 
+/opt/iksdp/bin/update-from-iso.sh
+```
+
+- wait for the download - if nessary - to be completed
+
+![update4_download](../shared/images/update4_download.png)
+
+- fyi: downloaded iso will be stored in /home/live/iksdp-update/debian-live.iso 
+
+- confirm to update by ENTER key
+
+![update4_download1](../shared/images/update4_download1.png)
+
+- when done do reboot
+
+![update4_download2](../shared/images/update4_download2.png)
+
 
 ## Support via Rustdesk Remote Session
 
