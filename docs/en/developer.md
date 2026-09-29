@@ -91,29 +91,53 @@ Linux:
 dd if=./debian-live-bookworm-RELEASEVERSION-TIMESTAMP-ARCH.hybrid.iso of=/dev/sdX bs=1M status=progress
 ```
 
-### MacOS:
+### MacOS
 (TODO: Find appropriate command)
 
 Alternatively, on macOS, the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) can be used.
 
+### Windows
 For Windows, tools like [Rufus](https://rufus.ie)  or the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) are recommended.
+
+### Testing in a virsh VM
+
+- create the vm
+
+```bash
+virt-install --name iksdptest --osinfo linux2024 \
+  --memory 12288 --vcpus 2  --machine q35 \
+  --network bridge=br0,model=virtio --graphics vnc \
+  --disk /data/vm1/debian-live-trixie-0.11.4-20260904202134-amd64.hybrid.iso,device=cdrom,bus=sata,readonly=on \
+  --import --noautoconsole
+``` 
+
+- create a virtual usb stick
+  
+```bash
+qemu-img create -f raw /data/vm1/usbstick.img 10G
+
+cat > /data/vm1/usbstick-device.xml <<'EOF'
+<disk type='file' device='disk' model='usb-storage'>
+  <driver name='qemu' type='raw'/>
+  <source file='/data/vm1/usbstick.img'/>
+  <target dev='sdc' bus='usb' removable='on'/>
+  <serial>TESTSTICK0001</serial>
+  <address type='usb' bus='0' port='2'/>
+</disk>
+EOF
+```
+
+- attach the stick
+
+```bash
+virsh attach-device iksdptest /data/vm1/usbstick-device.xml --live --config
+virsh detatch-device iksdptest /data/vm1/usbstick-device.xml --live --config
+```
 
 ### Recommendations
 
 For small-scale testing, a local virtualization solution such as VMware Fusion or Parallels is recommended. The image can simply be booted from a virtual CD-ROM.
 
-### Production Deployment
-
-For the IKSDP installation, the SSD is used as the boot medium. To ensure that no files are accessed by the local OS, a PXE boot is used.
-The system is booted, and on the startup screen, F7 is pressed to boot from the network. A minimal Live Helper Linux is started. To copy the files to the local SSD, execute the following:
-
-```bash
-sudo -s
-mount -t cifs //192.168.XXX.XXX /mnt
-dd if=/mnt/debian-live-bookworm-RELEASEVERSION-TIMESTAMP-ARCH.hybrid.iso of=/dev/nvme0n1 bs=1M status=progress
-sync
-reboot
-```
 
 ### Installation on an UEFI partition
 
@@ -188,28 +212,3 @@ If the client has not enough memory for booting `toram` (Option "Live System (am
 ## Customizing the Image
 
 TODO
-
-### Testing in a virsh VM 
-
-- create a virtual usb stick
-  
-```bash
-qemu-img create -f raw /data/vm1/usbstick.img 10G
-
-cat > /data/vm1/usbstick-device.xml <<'EOF'
-<disk type='file' device='disk' model='usb-storage'>
-  <driver name='qemu' type='raw'/>
-  <source file='/data/vm1/usbstick.img'/>
-  <target dev='sdc' bus='usb' removable='on'/>
-  <serial>TESTSTICK0001</serial>
-  <address type='usb' bus='0' port='2'/>
-</disk>
-EOF
-```
-
-- attach the stick
-
-```bash
-virsh attach-device iksdptest /data/vm1/usbstick-device.xml --live --config
-virsh detatch-device iksdptest /data/vm1/usbstick-device.xml --live --config
-```
