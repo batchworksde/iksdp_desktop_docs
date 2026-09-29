@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Documentazione per sviluppatori - IKSDP Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Documentazione per sviluppatori";
+        var mkdocs_page_input_path = "it/developer.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IKSDP Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/project/">Project Documentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >User Documentation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../en/user/">General</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../en/user/how-to-jitsi/">Jitsi Meeting Tool</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/poweruser/">Poweruser Documentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/developer/">Developer Documentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deutsch</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/project/">Projektdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Benutzerdokumentation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../de/user/">Allgemein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../de/user/how-to-jitsi/">Jitsi Videokonferenz</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/poweruser/">Poweruserdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/developer/">Entwicklerdokumentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Italiano</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../project/">Documentazione di progetto</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Documentazione per l'utente</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../user/">Generale</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../user/how-to-jitsi/">Videoconferenza Jitsi</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../poweruser/">Documentazione per Poweruser</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Documentazione per sviluppatori</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#destinatari-del-documento">Destinatari del documento</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-e-installazione">Download e installazione</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creazione-dellimmagine-locale">Creazione dell'immagine locale</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#creazione-dellimmagine-su-un-sistema-basato-su-debian">Creazione dell'immagine su un sistema basato su Debian</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creazione-dellimmagine-tramite-un-container-di-build">Creazione dell'immagine tramite un container di build</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#raccomandazioni">Raccomandazioni</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#copia-dellimmagine">Copia dell'immagine</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#modalita-di-test">Modalità di test</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#raccomandazioni_1">Raccomandazioni</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#produktivbetrieb">Produktivbetrieb</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#personalizzazione-dellimmagine">Personalizzazione dell'immagine</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IKSDP Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Italiano</li>
+      <li class="breadcrumb-item active">Documentazione per sviluppatori</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="documentazione-per-sviluppatori-di-iksdp-desktop-linux">Documentazione per sviluppatori di IKSDP Desktop Linux</h1>
+<h2 id="destinatari-del-documento">Destinatari del documento</h2>
+<p>Questo documento è rivolto a chi desidera personalizzare o ampliare il sistema IKSDP Linux.  </p>
+<p>Il progetto è attualmente ospitato su <a href="https://github.com/batchworksde/iksdp_desktop">GitHub</a>. La documentazione è disponibile nello stesso repository.  </p>
+<h2 id="download-e-installazione">Download e installazione</h2>
+<p>Sul sistema di destinazione, il sistema live viene avviato da un SSD. Tuttavia, per i test, il sistema può essere avviato anche da una chiavetta USB su hardware fisico o da un'immagine DVD in una macchina virtuale (VM).  </p>
+<p>L'ultima release può essere scaricata da <a href="https://github.com/batchworksde/iksdp_desktop/releases">GitHub Releases</a>. Il link all'ISO più recente si trova sotto "ISO Image".  </p>
+<p>Le versioni intermedie sono disponibili tramite il server web <a href="http://iksdp.pfadfinderzentrum.org">iksdp.pfadfinderzentrum.org/</a>.  </p>
+<h2 id="creazione-dellimmagine-locale">Creazione dell'immagine locale</h2>
+<p>Attualmente, ci sono due metodi testati per creare un'immagine localmente. In entrambi i casi, è necessario un sistema operativo basato su Linux.  </p>
+<ul>
+<li>Utilizzare una distribuzione basata su <code>.deb</code> (abbiamo testato Debian 12 e Ubuntu 24.04).  </li>
+<li>Creare l'immagine utilizzando un container <code>docker</code> o <code>podman</code>.  </li>
+</ul>
+<p>In entrambi i casi, l'utente che esegue la creazione dell'immagine deve avere permessi <code>sudo</code>.  </p>
+<p>Per prima cosa, è necessario clonare il repository da GitHub:  </p>
+<pre><code class="language-bash">git clone git@github.com:batchworksde/iksdp_desktop.git
+</code></pre>
+<p>Ora bisogna impostare la variabile d'ambiente <code>ROOTPW</code>, che definisce la password dell'utente <code>root</code> nell'immagine.</p>
+<h3 id="creazione-dellimmagine-su-un-sistema-basato-su-debian">Creazione dell'immagine su un sistema basato su Debian</h3>
+<p>Eseguire lo script di build <code>debian-live/build.sh</code>:</p>
+<pre><code class="language-bash">cd iksdp_desktop
+export ROOTPW=MYPASSWORD
+./debian-live/build.sh
+</code></pre>
+<h3 id="creazione-dellimmagine-tramite-un-container-di-build">Creazione dell'immagine tramite un container di build</h3>
+<p>Sul sistema di build deve essere installato <code>docker</code> o <code>podman</code>.</p>
+<pre><code class="language-bash">cd iksdp_desktop
+./debian-live/container-build.sh --build
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-bash">Use apt caching proxy (highly recommended)? [Y|n]: 
+
+Apt caching proxy URL [http://localhost:3142]: 
+Successfully built 9f7804923f2d
+Successfully tagged iksdp_desktop-builder:latest
+</code></pre>
+<pre><code class="language-bash">export ROOTPW=MYPASSWORD
+./debian-live/container-build.sh --run
+</code></pre>
+<p>A seconda della potenza del sistema di build, la creazione dell'immagine può richiedere tra 10 e XX minuti.</p>
+<p>L'immagine finale viene salvata nella sottocartella <code>build</code> con il nome <code>debian-live-bookworm-RELEASEVERSION-TIMESTAMP-ARCH.hybrid.iso</code>.</p>
+<h3 id="raccomandazioni">Raccomandazioni</h3>
+<p>Se si creano più immagini localmente, può essere utile utilizzare un proxy apt locale. Su sistemi basati su Debian, questo può essere installato con:</p>
+<pre><code class="language-bash">apt install apt-cacher-ng -y
+</code></pre>
+<p>Il servizio funziona su <code>tcp/3142</code>. Quando si utilizza il container di build, questo viene configurato automaticamente durante la creazione del container.
+Per <code>container-build.sh</code>, questo può essere impostato tramite una variabile d'ambiente:</p>
+<pre><code class="language-bash">export LB
+</code></pre>
+<h2 id="copia-dellimmagine">Copia dell'immagine</h2>
+<p>L'immagine può essere avviata da una chiavetta USB, un DVD o come immagine su disco.</p>
+<h3 id="modalita-di-test">Modalità di test</h3>
+<p>Per copiare l'immagine su una chiavetta USB, è possibile utilizzare <code>dd</code> su Linux o macOS.</p>
+<p>Linux:</p>
+<pre><code class="language-bash">dd if=./debian-live-bookworm-RELEASEVERSION-TIMESTAMP-ARCH.hybrid.iso of=/dev/sdX bs=1M status=progress
+</code></pre>
+<p>macOS:
+(TODO: trovare il comando appropriato)</p>
+<p>In alternativa, su macOS, si può utilizzare <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a>.</p>
+<p>Per Windows, strumenti come <a href="https://rufus.ie">rufus</a> o il <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> sono consigliati.</p>
+<h3 id="raccomandazioni_1">Raccomandazioni</h3>
+<p>Per test di piccola scala, una soluzione di virtualizzazione locale come VMware Fusion o Parallels è raccomandata. L'immagine può essere avviata direttamente da un CD-ROM virtuale.</p>
+<h3 id="produktivbetrieb">Produktivbetrieb</h3>
+<p>Nell'installazione presso l'IKSDP, l'SSD viene utilizzato come dispositivo di avvio. Per garantire che nessun file venga modificato dal sistema operativo locale, viene utilizzato un avvio PXE.
+Il sistema viene avviato e, nella schermata di avvio, si preme <code>F7</code> per avviare dalla rete. Viene avviato un sistema Linux live minimale. Per copiare i file sull'SSD locale, eseguire i seguenti comandi:</p>
+<pre><code class="language-bash">sudo -s
+mount -t cifs //192.168.XXX.XXX /mnt
+dd if=/mnt/debian-live-bookworm-RELEASEVERSION-TIMESTAMP-ARCH.hybrid.iso of=/dev/nvme0n1 bs=1M status=progress
+sync
+reboot
+</code></pre>
+<h2 id="personalizzazione-dellimmagine">Personalizzazione dell'immagine</h2>
+<p>TODO</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../poweruser/" class="btn btn-neutral float-left" title="Documentazione per Poweruser"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../poweruser/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/open_in_new_tab.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
