@@ -188,3 +188,28 @@ If the client has not enough memory for booting `toram` (Option "Live System (am
 ## Customizing the Image
 
 TODO
+
+### Testing in a virsh VM 
+
+- create a virtual usb stick
+  
+```bash
+qemu-img create -f raw /data/vm1/usbstick.img 10G
+
+cat > /data/vm1/usbstick-device.xml <<'EOF'
+<disk type='file' device='disk' model='usb-storage'>
+  <driver name='qemu' type='raw'/>
+  <source file='/data/vm1/usbstick.img'/>
+  <target dev='sdc' bus='usb' removable='on'/>
+  <serial>TESTSTICK0001</serial>
+  <address type='usb' bus='0' port='2'/>
+</disk>
+EOF
+```
+
+- attach the stick
+
+```bash
+virsh attach-device iksdptest /data/vm1/usbstick-device.xml --live --config
+virsh detatch-device iksdptest /data/vm1/usbstick-device.xml --live --config
+```
