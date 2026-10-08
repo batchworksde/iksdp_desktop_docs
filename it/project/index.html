@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Documentazione di progetto - IKSDP Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Documentazione di progetto";
+        var mkdocs_page_input_path = "it/project.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IKSDP Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/project/">Project Documentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >User Documentation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../en/user/">General</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../en/user/how-to-jitsi/">Jitsi Meeting Tool</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/poweruser/">Poweruser Documentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../en/developer/">Developer Documentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deutsch</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/project/">Projektdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Benutzerdokumentation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../de/user/">Allgemein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../de/user/how-to-jitsi/">Jitsi Videokonferenz</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/poweruser/">Poweruserdokumentation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../de/developer/">Entwicklerdokumentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Italiano</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Documentazione di progetto</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#liksdp">L'IKSDP</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#il-laboratorio-informatico">Il laboratorio informatico</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hardware">Hardware</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#software">Software</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#modalita-ospiti-e-pubblica-modalita-non-persistente">Modalità ospiti e pubblica: modalità non persistente</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#modalita-studenti-e-amministrazione-modalita-persistente">Modalità studenti e amministrazione: modalità persistente</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#progetto-open-source-su-github">Progetto Open Source su GitHub</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#supporto-remoto">Supporto remoto</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-creazione-di-un-issue-nel-progetto-github">1. Creazione di un issue nel progetto GitHub</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-supporto-live-tramite-videoconferenzarustdesk">2. Supporto live tramite videoconferenza/RustDesk</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-supporto-tramite-jetkvm">3. Supporto tramite JetKVM</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Documentazione per l'utente</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../user/">Generale</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../user/how-to-jitsi/">Videoconferenza Jitsi</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../poweruser/">Documentazione per Poweruser</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../developer/">Documentazione per sviluppatori</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IKSDP Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Italiano</li>
+      <li class="breadcrumb-item active">Documentazione di progetto</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="documentazione-del-progetto-iksdp-desktop-linux">Documentazione del progetto IKSDP Desktop Linux</h1>
+<h2 id="liksdp">L'IKSDP</h2>
+<p>L'IKSDP (International Kenyan Scout Development Program) è un'istituzione educativa situata a Nyandiwa, in Kenya. La struttura comprende un asilo, una scuola primaria e, più recentemente, una scuola secondaria.  </p>
+<p>Per la scuola secondaria verrà allestito un laboratorio informatico con accesso a Internet. Inoltre, i dispositivi saranno disponibili anche per l'uso da parte delle persone della comunità locale.  </p>
+<h2 id="il-laboratorio-informatico">Il laboratorio informatico</h2>
+<p>Il laboratorio informatico sarà accessibile agli studenti, agli insegnanti, all'amministrazione scolastica, agli ospiti dell'IKSDP e al pubblico generale. È stata installata una connessione Internet tramite Starlink. Inoltre, è stato configurato un punto di accesso Wi-Fi che potrebbe fungere da router Internet in futuro. Questo punto di accesso include un modem LTE integrato, che potrebbe essere utilizzato tramite provider mobili come Safaricom (la copertura 4G+5G è eccellente). Questa configurazione garantisce una ridondanza nell'accesso a Internet, nel caso in cui Starlink venga disattivato in futuro.  </p>
+<h3 id="hardware">Hardware</h3>
+<p>L'hardware acquistato e installato è il seguente:  </p>
+<ul>
+<li>5x BOSGAME Mini PC B100  </li>
+<li>5x Monitor Lenovo L22i-40 21.5" FHD  </li>
+<li>5x Cuffie USB Logitech H390  </li>
+<li>5x Webcam Logitech C270 HD  </li>
+<li>1x Stampante Epson L6290 EcoTank  </li>
+<li>1x Starlink Mini  </li>
+<li>1x Mikrotik L009UiGS-2HaxD  </li>
+<li>1x Mikrotik Hex  </li>
+<li>1x Mikrotik WAP ac LTE kit  </li>
+<li>1x JetKVM  </li>
+</ul>
+<p>La documentazione di rete è disponibile per l'utente avanzato.  </p>
+<h3 id="software">Software</h3>
+<p>Sui PC è stato installato un sistema Linux live. Questo fornisce sia il sistema operativo che tutte le applicazioni necessarie. Abbiamo scelto Linux perché è un sistema operativo gratuito e open source. Linux è ampiamente utilizzato nelle istituzioni educative per i seguenti motivi:  </p>
+<ul>
+<li>Linux e il suo software possono essere utilizzati e modificati gratuitamente.  </li>
+<li>Linux è meno vulnerabile a malware e virus.  </li>
+<li>Linux è il sistema operativo leader per i server e i sistemi embedded.  </li>
+</ul>
+<p>IKSDP Linux supporta due modalità operative:  </p>
+<h4 id="modalita-ospiti-e-pubblica-modalita-non-persistente">Modalità ospiti e pubblica: modalità non persistente</h4>
+<p>Tutte le modifiche vengono eliminate dopo un riavvio. Questo garantisce che i dati degli utenti ospiti o degli utenti del caffè Internet non vengano salvati o persi.<br />
+Gli utenti possono installare software, ma tutte le applicazioni, i documenti e le impostazioni verranno resettati al riavvio.  </p>
+<h4 id="modalita-studenti-e-amministrazione-modalita-persistente">Modalità studenti e amministrazione: modalità persistente</h4>
+<p>Per questa modalità, viene preparata una chiavetta USB per l'utente o il gruppo di utenti. Tutte le modifiche al sistema vengono salvate sulla chiavetta USB. Gli utenti possono installare software e creare documenti che rimarranno disponibili dopo un riavvio.<br />
+I dati sulla chiavetta USB possono essere crittografati opzionalmente. Gli utenti possono anche impostare una password personale.  </p>
+<h2 id="progetto-open-source-su-github">Progetto Open Source su GitHub</h2>
+<p>Il sistema operativo Linux utilizzato è disponibile come progetto open-source su GitHub all'indirizzo <a href="https://github.com/batchworksde/iksdp_desktop">https://github.com/batchworksde/iksdp_desktop</a> e può essere ulteriormente sviluppato da tutti i partecipanti al progetto. GitHub è attualmente la più grande piattaforma mondiale per lo sviluppo open-source. Il concetto di "Harambee" si allinea perfettamente con l'idea dell'open-source, che promuove la collaborazione alla pari. Chiunque può unirsi al progetto, copiarlo e svilupparlo ulteriormente.  </p>
+<p>Inoltre, il progetto non dovrebbe dipendere da singoli individui e dovrebbe sempre essere trasferibile a volontari o all'IKSDP.  </p>
+<p>Se emergono nuove esigenze software o problemi da risolvere, possono essere segnalati come issue su GitHub.  </p>
+<p>Inoltre, i PC dovrebbero essere aggiornati almeno due volte all'anno.  </p>
+<h2 id="supporto-remoto">Supporto remoto</h2>
+<p>Il referente locale per l'ambiente PC è Victor. La rete è connessa al cloud tramite una VPN ZeroTier. Se necessario, il personale di supporto può connettersi in remoto ai PC locali e alle apparecchiature di rete tramite questa VPN.  </p>
+<p>Per il supporto tecnico, Victor ha diverse opzioni:  </p>
+<h4 id="1-creazione-di-un-issue-nel-progetto-github">1. Creazione di un issue nel progetto GitHub</h4>
+<p>Per questa operazione è necessaria una connessione Internet funzionante. Le issue possono essere create anche da un telefono cellulare o un tablet.<br />
+Gli issue possono includere segnalazioni di bug, richieste di modifiche alla configurazione o richieste di software aggiuntivo da includere nell'installazione di base (sia in modalità persistente che non persistente).<br />
+Uno sviluppatore del progetto esaminerà e, se necessario, implementerà le modifiche richieste. Se una modifica viene applicata al sistema base, verrà creato un nuovo file immagine di base. Questo file dovrà poi essere copiato sui PC.  </p>
+<p>La documentazione su come creare issue su GitHub è disponibile per l'utente avanzato.<br />
+La documentazione sul processo di aggiornamento è disponibile per l'utente avanzato.  </p>
+<h4 id="2-supporto-live-tramite-videoconferenzarustdesk">2. Supporto live tramite videoconferenza/RustDesk</h4>
+<p>Per questa operazione, IKSDP Linux deve essere avviato e deve essere disponibile una connessione Internet.<br />
+Se necessario, può essere avviata l'applicazione <strong>"RustDesk"</strong>. RustDesk fornisce all'utente un ID e una password, che devono essere comunicati in tempo reale al personale di supporto.<br />
+Il personale di supporto avvia anche l'applicazione RustDesk e può quindi vedere lo schermo remoto e controllare il mouse e la tastiera.  </p>
+<h4 id="3-supporto-tramite-jetkvm">3. Supporto tramite JetKVM</h4>
+<p>Per questa operazione è necessaria una connessione Internet.<br />
+JetKVM è pensato per i casi in cui un PC non si avvia ed è necessario un supporto remoto. Il dispositivo JetKVM viene collegato al PC tramite USB e HDMI. Il personale di supporto può quindi accedere al PC da remoto utilizzando un account designato e persino apportare modifiche al BIOS.  </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../de/developer/" class="btn btn-neutral float-left" title="Entwicklerdokumentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../user/" class="btn btn-neutral float-right" title="Generale">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../de/developer/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../user/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/open_in_new_tab.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
