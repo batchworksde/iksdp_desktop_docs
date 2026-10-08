@@ -345,3 +345,84 @@ Use one of the PCs to do the following steps:
 and click "OK"
 
 wait 1-2 minutes for changes to be applied. Test the new password.
+
+## Troubleshooting network issues
+
+If users report a problem such as "I cannot connect to the internet", follow the steps below to find out where the problem is. The checks are done in order: first the network address of the PC, then the connection to the router, then the connection to the internet, and finally the translation of website names into internet addresses.
+
+### Step 1: Open a terminal
+
+1. Click the "Show Apps" button (the grid of dots) in the bottom left corner.
+2. Type `terminal` into the search field at the top.
+3. Click on "Terminal".
+
+![poweruser_start_terminal.png](../shared/images/poweruser/poweruser_start_terminal.png)
+
+A window opens in which you can type commands. After typing a command, press the "Enter" key to run it.
+
+### Step 2: Check that the PC has a network address
+
+Every PC needs a network address to communicate with the router and the internet. To show the network address, type the following command and press "Enter":
+
+```bash
+ip a
+```
+
+The output lists the network connections of the PC. Each one starts with a number and a name, for example **1: lo:** and **2: enp1s0:**.
+
+![poweruser_ipa.png](../shared/images/poweruser/poweruser_ipa.png)
+
+You can ignore the first entry **lo**. It is an internal connection inside the PC. Look at the other entries. **Note:** The names in the screenshot come from a test computer. On the PCs at IKSDP, the names will be different (they often start with "en" for a cable connection or "wl" for Wi-Fi).
+
+Look for a line that starts with **inet** followed by an address beginning with **192.168.200.** (for example 192.168.200.41).
+
+- If you find such a line, the PC has a network address. Continue with the next step.
+- If there is no such line, the PC did not get a network address. Check that the network cable is plugged in (or that the PC is connected to the Wi-Fi) and that the router is switched on.
+
+### Step 3: Check the connection to the router
+
+The router is the device at IKSDP that connects the PCs to the internet. Type the following command and press "Enter":
+
+```bash
+ping -O -c 10 192.168.200.1
+```
+
+The command sends 10 small test messages to the router. Wait about 10 to 20 seconds until it has finished.
+
+If the connection is working, every line shows a **time=** value in milliseconds (ms), as in this screenshot:
+
+![ping_router](../shared/images/poweruser/poweruser_ping_router_to.png)
+
+If the connection is not working, the lines show **no answer yet** and the summary at the end says **100% packet loss**:
+
+![ping_router](../shared/images/poweruser/poweruser_ping_router_to_no_connection.png)
+
+If there is no connection to the router, the problem is between the PC and the router. Check that the network cable is plugged in (or that the PC is connected to the Wi-Fi) and that the router is switched on. Do not continue with the next steps until this check works.
+
+### Step 4: Check the connection to the internet
+
+If the connection to the router is working, check the connection to the internet. Type the following command and press "Enter":
+
+```bash
+ping -O -c 10 8.8.8.8
+```
+
+Again, wait about 10 to 20 seconds. If the connection is working, the lines show **time=** values, as in this screenshot:
+
+![poweruser_ping_internet_to.png](../shared/images/poweruser/poweruser_ping_internet_to.png)
+
+If the lines show **no answer yet** instead, the PC can reach the router, but the router cannot reach the internet. In this case, the problem is with the router or the internet provider, not with the PC.
+
+### Step 5: Check that website names can be found
+
+Computers find websites using numeric internet addresses. A name such as "google.com" must first be translated into such an address. To check that this translation works, type the following command and press "Enter":
+
+```bash
+host google.com
+```
+
+If it works, the output shows several lines starting with **google.com has address**, followed by numbers:
+
+![poweruser_dns.png](../shared/images/poweruser/poweruser_dns.png)
+
+If you see an error message instead (for example "connection timed out" or "not found"), the internet connection itself is working, but website names cannot be translated into addresses. In this case, websites will not open in the browser even though the internet connection works.
